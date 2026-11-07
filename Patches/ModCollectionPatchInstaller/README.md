@@ -11,8 +11,6 @@ Patch package for the **MKev B42 Mod Collection** (Project Zomboid Build 42.21 m
 | MKevServerBootPatch (`mkevserverbootpatch`) | 1.1.0 |
 | Server setup (`MKevServer_setup`) | 381 mods / 329 Workshop items, Map Muldraugh, KY, sandbox + preset `MKevServer` |
 
-I Knew It! is not part of this package. It comes from the Steam Workshop like every other collection mod:
-https://steamcommunity.com/sharedfiles/filedetails/?id=3834998997
 
 ## Install (Windows)
 1. Subscribe to the Workshop collection.
