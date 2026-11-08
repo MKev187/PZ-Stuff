@@ -4,7 +4,8 @@ Project Zomboid, Build 42 (singleplayer and multiplayer). Author: MKev.
 
 ## 1.0.1b
 
-### Changed Description workshop.txt
+### Changed 
+- Description workshop.txt
 
 ## 1.0.1
 
