@@ -1,5 +1,6 @@
 # I Knew It! – Changelog
 
+Quality of Life Mod for PZ Build B42.21 +
 Project Zomboid, Build 42 (singleplayer and multiplayer). Author: MKev.
 
 ## 1.0.1b
