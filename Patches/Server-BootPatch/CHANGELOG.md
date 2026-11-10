@@ -1,8 +1,15 @@
 # Changelog: MKev's Server BootPatch
 
-Mod id `mkevserverbootpatch`. Current version **1.1.0**. There is no standalone zip. The mod ships inside [MKev's Modpatch Installer](../../Modpatch-Installer/README.md).
+Mod id `mkevserverbootpatch`. Current version **1.1.1**. Standalone zip: [`Server-BootPatch-v1.1.1.zip`](Server-BootPatch-v1.1.1.zip). The same mod ships inside [MKev's Modpatch Installer v1.2](../../Modpatch-Installer/README.md).
 
-These notes are the mod's own `CHANGELOG.md` from installer v1.1b (the BootPatch copy is unchanged from installer v1.0).
+## MKev's Server BootPatch 1.1.1 — 2026-11-10
+
+- F1–F3 are fixed parts of the mod again: `42/media/scripts/recipes/recipes_fletching.txt`, `42/media/scripts/recipes/recipes_MCR_1Handed.txt`, `42/media/scripts/sounds/LabSounds.txt`. No installer step is needed, so the mod works on Linux (and any) dedicated servers by copying the folder.
+- Reason: on a Linux dedicated server the Windows installer never ran. 1.1.0 then had only placeholders, and all F1–F3 boot messages stayed (`//Royalty-free`, `Unknown skill "Carpentry"`, 6× `Unknown skill "Electrical"`; server log of 2026-11-10).
+- Built from the current Workshop files (checked 2026-11-10, unchanged since 1.1.0) with the same transformation as the installer. Same bytes as the installer build of 1.1.0 and the 1.0.2 overrides.
+- Self-healing: when one of the original mods updates, the fix is rewritten from the new original instead of needing a new BootPatch version. Same logic in installer v1.2 and the optional admin tools `tools/check_upstream.ps1 -Fix` / new `tools/check_upstream.sh --fix` (no setup step for server admins) (core `tools/bootfix.ps1`): find the file the game loads (highest `42.x` folder, `PZ_GAMEBUILD` cap, else `common`, case-insensitive); unchanged → `KEEP` the bundled file; changed with the error → `REBUILT` by the token edit (BOM/CRLF kept; checked: error tokens gone, only intended lines, braces balanced); error gone → `FIXED_UPSTREAM`, override removed; file no longer loaded → `NOT_LOADED`, override removed; mod missing → bundled file stays; check failed → `FAIL`, previous file stays, warning only. `MANIFEST.sha256` is rewritten after a change. Without the switch both tools are a dry run (exit `2` = changes found, `3` = FAIL).
+- `mod.info`: modversion 1.1.1, `versionMin=42.21`, no `versionMax`. New `README_DE.md` in the mod folder.
+- [MKev's Modpatch Installer v1.2](../../Modpatch-Installer/CHANGELOG.md) ships this version; it no longer builds F1–F3 from scratch, it only rewrites a fix when a mod was updated.
 
 ## MKev's Server BootPatch 1.1.0 — 2026-11-06
 
