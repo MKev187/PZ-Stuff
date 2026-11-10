@@ -1,6 +1,14 @@
-# I Knew It! – Changelog
+# I Know It! – Changelog
 
 Project Zomboid, Build 42 (singleplayer and multiplayer). Author: MKev.
+
+## 1.01b
+
+- Rebrand from I Knew It! to I Know It!.
+- Mod id `iknowit`.
+- New graphics and preview.
+- New Workshop ID 3836594593.
+- Added multilingual support: English, German, Traditional Chinese (EN / DE / CH).
 
 ## 1.0.1
 
