@@ -5,7 +5,7 @@ Mod id `mkevserverbootpatch`, current version **1.1.0**.
 
 It is separate from [MKev's Modpatcher](../ModPatcher/README.md). Load it at the very end of `Mods=`, after `mkev_modpatcher`. The server and every client need the same version, because script checksums have to match.
 
-There is no standalone BootPatch zip. Version 1.1.0 is included in [MKev's Modpatch Installer](../Patch-Installer/README.md). The installer builds fixes F1–F3 on the machine where it runs. This folder documents that mod. It does not ship third-party files.
+There is no standalone BootPatch zip. Version 1.1.0 is included in [MKev's Modpatch Installer](../../Modpatch-Installer/README.md). The installer builds fixes F1–F3 on the machine where it runs. This folder documents that mod. It does not ship third-party files.
 
 Author: **MKev**.
 
@@ -71,7 +71,7 @@ Each folder contains only `readme_placeholder.txt`. The scanner checksums files 
 
 ## How 1.1.0 builds F1–F3
 
-From 1.1.0 onward the package does not contain copies of the three upstream files. Those files belong to their authors. [MKev's Modpatch Installer](../Patch-Installer/README.md) builds them when it installs this mod (the same bytes as the old 1.0.2 overrides):
+From 1.1.0 onward the package does not contain copies of the three upstream files. Those files belong to their authors. [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) builds them when it installs this mod (the same bytes as the old 1.0.2 overrides):
 
 1. It finds your Steam Workshop folder for Project Zomboid (`steamapps\workshop\content\108600`) through `libraryfolders.vdf`. `PZ_WORKSHOP` overrides that search (a `;` list is accepted).
 2. It reads your installed file. The Workshop folder is only read.
@@ -96,7 +96,7 @@ The three upstream problems, and a short list of other boot-log notes that this 
 
 ## Install
 
-Use [MKev's Modpatch Installer](../Patch-Installer/README.md). Option 1 or option 2 copies `mkevserverbootpatch` into `Zomboid\mods` and builds F1–F3 as part of that copy. Option 5 shows what would change and writes nothing.
+Use [MKev's Modpatch Installer](../../Modpatch-Installer/README.md). Option 1 or option 2 copies `mkevserverbootpatch` into `Zomboid\mods` and builds F1–F3 as part of that copy. Option 5 shows what would change and writes nothing.
 
 After a mod update, run the installer again. A fix that no longer matches is skipped and named in the installer log. Your Workshop files stay as they were.
 

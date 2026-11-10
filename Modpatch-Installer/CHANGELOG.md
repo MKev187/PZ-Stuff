@@ -1,4 +1,8 @@
-# Changelog: MKev Modpatch Installer
+# Changelog: MKev's Modpatch Installer
+
+Current package in this folder: `Modpatch-Installer-v1.1b.zip`.
+Older packages (`Modpatch-Installer-v1.0.zip`, `MKev-ModPatcher-v0.3.0.zip`, and a second copy of the v1.1b zip) are in [Patches/Patch-Installer](../Patches/Patch-Installer/README.md).
+`Modpatch-Installer-v1.1.zip` and `Modpatcher-v1.1_vvr.zip` are not stored in this repository. The hashes in the v1.1 section below are the ones published with those versions. The standalone current patcher is [`Modpatcher-v1.1b.zip`](../Patches/ModPatcher/Modpatcher-v1.1b.zip).
 
 ## v1.1b - 2026-11-10
 

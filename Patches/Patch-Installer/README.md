@@ -1,10 +1,13 @@
 # MKev's Modpatch Installer
 
+This folder is the archive of previous installer packages, not the current release.
+Download the current build from [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) ([`/Modpatch-Installer/Modpatch-Installer-v1.1b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.1b.zip)).
+
 One download that sets up a dedicated server and the clients for a 376-mod Project Zomboid Build 42 multiplayer list.
 Every fix is matched to a specific error from a real server log, and every one is a runtime patch or a file built into the patch mods' own folders.
 Workshop originals are never edited.
 
-This is the all-in-one package. It includes:
+The current installer is the all-in-one package. It includes:
 
 - **MKev's Modpatcher** (`mkev_modpatcher` 1.1b), the core runtime compatibility patch
 - the **server kit** (`MKevServer_setup`: mod list, load order, map, sandbox settings, and the in-game preset)
@@ -14,7 +17,7 @@ The installer is in English and German. `ModPatchInstaller.bat` asks which langu
 
 - **Game:** Project Zomboid Build **42.22.2**, multiplayer (dedicated server and clients)
 - **Collection:** [MKev Zomboid Modlist B42.22 (v1.0), Workshop 3827894199](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199)
-- **Current release:** `Modpatch-Installer-v1.1b.zip`
+- **Current release:** [`Modpatch-Installer-v1.1b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.1b.zip) in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md). This folder still has a copy of that zip, plus the older packages below.
 
 Deeper docs, kept next to this folder:
 
@@ -27,11 +30,17 @@ Author: **MKev**.
 
 ## Downloads
 
-Files in this folder:
+Current release, in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md):
 
 | File | Version | SHA256 |
 |---|---|---|
-| **`Modpatch-Installer-v1.1b.zip`** (current) | Installer 1.1b + ModPatcher 1.1b + BootPatch 1.1.0 | `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f` |
+| **[`Modpatch-Installer-v1.1b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.1b.zip)** | Installer 1.1b + ModPatcher 1.1b + BootPatch 1.1.0 | `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f` |
+
+Files still in this folder:
+
+| File | Version | SHA256 |
+|---|---|---|
+| `Modpatch-Installer-v1.1b.zip` | Same bytes as `/Modpatch-Installer/Modpatch-Installer-v1.1b.zip` | `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f` |
 | `Modpatch-Installer-v1.0.zip` | Installer 1.0 (ModPatcher 0.1.11 + BootPatch 1.1.0) | `12b5647a6a1744a0a5ac6507948356dfc3f0d7c09741c7d1c458b7b3f06b03b2` |
 | `MKev-ModPatcher-v0.3.0.zip` | Older package for Build 42.21 (reference only). The filename is the one that package was published under. | `0b671a66e3aed9fd868eecb69533170b84268f098f9d8e27ec93b57fb517d50c` |
 
@@ -214,7 +223,7 @@ Yes. The server and every player need the same `mkev_modpatcher` and `mkevserver
 Yes. Option 1 replaces only `Mods=`, `WorkshopItems=` and `Map=` in `servertest.ini`. Passwords, ports, server name, and all other lines stay byte-for-byte. Everything is backed up first, and option 5 shows the changes without writing anything. The package itself contains no credentials.
 
 **How do I verify my download?**
-Compare the SHA256 of the zip with [`SHA256SUMS.txt`](SHA256SUMS.txt). In PowerShell: `Get-FileHash .\Modpatch-Installer-v1.1b.zip`.
+Compare the SHA256 of the current zip with [`SHA256SUMS.txt`](../../Modpatch-Installer/SHA256SUMS.txt) in `/Modpatch-Installer/`. In PowerShell: `Get-FileHash .\Modpatch-Installer-v1.1b.zip`. Hashes for the copies kept in this folder are in [`SHA256SUMS.txt`](SHA256SUMS.txt).
 
 **I updated from v1.1 or v1.0. What do I do?**
 Run the v1.1b installer again, or replace `Zomboid\mods\mkev_modpatcher` with the folder from the zip. Do it on the server and on every client.

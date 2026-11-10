@@ -7,9 +7,11 @@ English and German installers (`ModPatchInstaller_en.ps1`, `ModPatchInstaller_de
 ModPatcher history, on its own: [MKev's Modpatcher](../ModPatcher/CHANGELOG.md).
 BootPatch history, on its own: [MKev's Server BootPatch](../Server-BootPatch/CHANGELOG.md).
 
+The current v1.1b package is in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md). This folder keeps a copy of that zip, plus the earlier packages named below.
+
 ## MKev's Modpatch Installer v1.1b — 2026-11-10
 
-**Download:** `Modpatch-Installer-v1.1b.zip` (this folder)  
+**Download:** [`Modpatch-Installer-v1.1b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.1b.zip) in `/Modpatch-Installer/` (a copy with the same bytes is also in this folder)  
 **SHA256:** `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f`  
 Bundled ModPatcher: `mkev_modpatcher` 1.1b (also as `Modpatcher-v1.1b.zip` in [Patches/ModPatcher](../ModPatcher/), SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).
 
@@ -77,7 +79,7 @@ Installer for the collection release (base 0.3.0multi, EN/DE). Build 42.22.2, co
 
 ## MKev's Modpatch Installer v1.1b — 10.11.2026
 
-**Download:** `Modpatch-Installer-v1.1b.zip` (dieser Ordner)  
+**Download:** [`Modpatch-Installer-v1.1b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.1b.zip) in `/Modpatch-Installer/` (eine Kopie mit denselben Bytes liegt auch in diesem Ordner)  
 **SHA256:** `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f`  
 Enthaltener ModPatcher: `mkev_modpatcher` 1.1b (auch einzeln als `Modpatcher-v1.1b.zip` in [Patches/ModPatcher](../ModPatcher/), SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).
 

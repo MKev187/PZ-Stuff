@@ -1,6 +1,6 @@
 # Changelog: MKev's Server BootPatch
 
-Mod id `mkevserverbootpatch`. Current version **1.1.0**. There is no standalone zip. The mod ships inside [MKev's Modpatch Installer](../Patch-Installer/README.md).
+Mod id `mkevserverbootpatch`. Current version **1.1.0**. There is no standalone zip. The mod ships inside [MKev's Modpatch Installer](../../Modpatch-Installer/README.md).
 
 These notes are the mod's own `CHANGELOG.md` from installer v1.1b (the BootPatch copy is unchanged from installer v1.0).
 

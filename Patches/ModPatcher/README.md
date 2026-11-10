@@ -9,7 +9,7 @@ It replaces MKevPackPatches 2.5.0. `mod.info` marks that mod incompatible, and t
 
 Author: **MKev**.
 
-The all-in-one server and client setup (this mod, the server kit, and the Server BootPatch) is [MKev's Modpatch Installer](../Patch-Installer/README.md). Boot-log script fixes are a separate mod: [MKev's Server BootPatch](../Server-BootPatch/README.md).
+The all-in-one server and client setup (this mod, the server kit, and the Server BootPatch) is [MKev's Modpatch Installer](../../Modpatch-Installer/README.md). Boot-log script fixes are a separate mod: [MKev's Server BootPatch](../Server-BootPatch/README.md).
 
 ---
 
