@@ -1,13 +1,14 @@
 # MKev's Modpatch Installer
 
 This folder is the archive of previous installer packages, not the current release.
-Download the current build from [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) ([`/Modpatch-Installer/Modpatch-Installer-v1.1b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.1b.zip)).
+Download the current build (v1.2) from [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) ([`/Modpatch-Installer/Modpatch-Installer-v1.2.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.2.zip)).
+The description below is the one of the archived v1.1b package. What changed in v1.2 (Server BootPatch 1.1.1: fixes bundled, rewritten by the installer when a mod updates): [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md).
 
 One download that sets up a dedicated server and the clients for a 376-mod Project Zomboid Build 42 multiplayer list.
 Every fix is matched to a specific error from a real server log, and every one is a runtime patch or a file built into the patch mods' own folders.
 Workshop originals are never edited.
 
-The current installer is the all-in-one package. It includes:
+The v1.1b installer is the all-in-one package. It includes:
 
 - **MKev's Modpatcher** (`mkev_modpatcher` 1.1b), the core runtime compatibility patch
 - the **server kit** (`MKevServer_setup`: mod list, load order, map, sandbox settings, and the in-game preset)
@@ -16,13 +17,13 @@ The current installer is the all-in-one package. It includes:
 The installer is in English and German. `ModPatchInstaller.bat` asks which language to use.
 
 - **Game:** Project Zomboid Build **42.22.2**, multiplayer (dedicated server and clients)
-- **Collection:** [MKev Zomboid Modlist B42.22 (v1.0), Workshop 3827894199](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199)
-- **Current release:** [`Modpatch-Installer-v1.1b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.1b.zip) in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md). This folder still has a copy of that zip, plus the older packages below.
+- **Collection:** [MKev Zomboid Modlist B42.22, Workshop 3827894199](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199)
+- **Current release:** [`Modpatch-Installer-v1.2.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.2.zip) in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md). This folder keeps v1.1b and the older packages below.
 
 Deeper docs, kept next to this folder:
 
 - [MKev's Modpatcher](../ModPatcher/README.md) — what the core patch does, including the VVR spawn guard and the Tweed jacket fix
-- [MKev's Server BootPatch](../Server-BootPatch/README.md) — the boot-log fixes and how F1–F3 are built from your Workshop files
+- [MKev's Server BootPatch](../Server-BootPatch/README.md) — the boot-log fixes (bundled in the mod since 1.1.1)
 
 Author: **MKev**.
 
@@ -34,13 +35,13 @@ Current release, in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md)
 
 | File | Version | SHA256 |
 |---|---|---|
-| **[`Modpatch-Installer-v1.1b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.1b.zip)** | Installer 1.1b + ModPatcher 1.1b + BootPatch 1.1.0 | `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f` |
+| **[`Modpatch-Installer-v1.2.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.2.zip)** | Installer 1.2 + ModPatcher 1.1b + BootPatch 1.1.1 | `c9c6b3d48882b2136dfce0d750f1b1cb2d390e71969e79d374967dde6613a727` |
 
 Files still in this folder:
 
 | File | Version | SHA256 |
 |---|---|---|
-| `Modpatch-Installer-v1.1b.zip` | Same bytes as `/Modpatch-Installer/Modpatch-Installer-v1.1b.zip` | `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f` |
+| `Modpatch-Installer-v1.1b.zip` | Installer 1.1b (ModPatcher 1.1b + BootPatch 1.1.0) | `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f` |
 | `Modpatch-Installer-v1.0.zip` | Installer 1.0 (ModPatcher 0.1.11 + BootPatch 1.1.0) | `12b5647a6a1744a0a5ac6507948356dfc3f0d7c09741c7d1c458b7b3f06b03b2` |
 | `MKev-ModPatcher-v0.3.0.zip` | Older package for Build 42.21 (reference only). The filename is the one that package was published under. | `0b671a66e3aed9fd868eecb69533170b84268f098f9d8e27ec93b57fb517d50c` |
 
@@ -55,7 +56,7 @@ These two archives are described in the changelog and are not stored in this rep
 | `Modpatch-Installer-v1.1.zip` | Installer 1.1 (ModPatcher 1.1_vvr + BootPatch 1.1.0) | `8ac543cb9be7548a1ac6da04eb478caa3165f7dc86227f915a3055612ecaec3c` |
 | `Modpatcher-v1.1_vvr.zip` | ModPatcher 1.1_vvr only | `e1f7c4690fc15e0c11f793bfe08b5c35d4423c2a4a2c86fc991d5d81bc6cfe3a` |
 
-There is no standalone Server BootPatch zip, and no standalone ModPatcher zip for 1.0 or 0.1.11.
+Standalone Server BootPatch (current only): [`Server-BootPatch-v1.1.1.zip`](../Server-BootPatch/Server-BootPatch-v1.1.1.zip) (SHA256 `f218f38753b77cc7c0eaa2fb6aba116f403f2a21c85f8011a4167a663eb23466`). There is no standalone BootPatch zip for 1.1.0 and no standalone ModPatcher zip for 1.0 or 0.1.11.
 
 ---
 
@@ -85,7 +86,7 @@ Two scripts with the same logic: `ModPatchInstaller_en.ps1` and `ModPatchInstall
 
 **What option 1 changes**
 
-- Copies `mkev_modpatcher` and `mkevserverbootpatch` to `Zomboid\mods`. After copying, it checks that the copy is identical to the package. The BootPatch copy is the staging copy, with F1–F3 built in. See [MKev's Server BootPatch](../Server-BootPatch/README.md).
+- Copies `mkev_modpatcher` and `mkevserverbootpatch` to `Zomboid\mods`. After copying, it checks that the copy is identical to the package. In v1.1b the BootPatch copy is the staging copy, with F1–F3 built in (v1.2 copies BootPatch 1.1.1 with the fixes bundled and rewrites them if a mod was updated). See [MKev's Server BootPatch](../Server-BootPatch/README.md).
 - `Zomboid\Server\servertest.ini`: replaces **only** the lines `Mods=`, `WorkshopItems=` and `Map=`. Before replacing, it shows how many entries are added and removed.
 - Replaces `servertest_SandboxVars.lua` with the MKev server sandbox. The old file goes into the backup.
 - Adds the mod preset `MKevServer` to `Zomboid\Lua\pz_modlist_settings.cfg`. Your own presets stay.
@@ -105,7 +106,7 @@ Two scripts with the same logic: `ModPatchInstaller_en.ps1` and `ModPatchInstall
 - **No secrets shipped:** the package contains no `servertest.ini`, only the three list values (`Mods=`, `WorkshopItems=`, `Map=`) as separate text files.
 - **Steam libraries:** finds Workshop folders through `libraryfolders.vdf`. `PZ_WORKSHOP` overrides this, pointing at `...\steamapps\workshop\content\108600`.
 
-`VERSION.txt` in the current zip records installer 1.1b, ModPatcher 1.1b, BootPatch 1.1.0, and the server kit below.
+`VERSION.txt` in the v1.1b zip records installer 1.1b, ModPatcher 1.1b, BootPatch 1.1.0, and the server kit below. The v1.2 zip records installer 1.2, ModPatcher 1.1b, BootPatch 1.1.1 and the same server kit.
 
 ---
 
@@ -157,7 +158,7 @@ Every module lists its root cause in its file header and in `UPSTREAM.md` inside
 
 ---
 
-## MKev's Server BootPatch (`mkevserverbootpatch` 1.1.0)
+## MKev's Server BootPatch (`mkevserverbootpatch` 1.1.0 in v1.1b, 1.1.1 in v1.2)
 
 A small second mod that loads at the very end, after ModPatcher. It fixes script bugs that show up in the boot log. Full notes: [MKev's Server BootPatch](../Server-BootPatch/README.md).
 
@@ -168,13 +169,15 @@ A small second mod that loads at the very end, after ModPatcher. It fixes script
 | F3 | Zombie Virus Vaccine (3615135168) | A `//` comment had disabled the `Injection_A` sound. It becomes a `/* */` comment. |
 | F5/F6 | itself | Empty `AnimSets` / `actiongroups` folders, so the boot log loses its `NoSuchFileException` lines |
 
-F1–F3 are not shipped as copies of the original files. Those files belong to their authors. At install time the installer:
+In v1.1b (BootPatch 1.1.0) F1–F3 were not shipped as files. At install time the installer:
 
 1. reads your own installed Workshop file (read-only);
 2. checks its SHA256 is exactly the version the fix was made for;
 3. changes only the listed text and checks the result's SHA256.
 
 If a mod was updated, or a newer version folder appears next to it, that one fix is skipped and reported as `NOT built`. Everything else still installs. `tools\check_upstream.ps1` inside the BootPatch folder reports drift when an original file changed.
+
+Since BootPatch 1.1.1 (installer v1.2) F1–F3 are fixed files inside the mod, so they also work on Linux servers where the installer never runs. Installer v1.2 rewrites them from the new original when one of the mods updates (or removes them when the author fixed the bug). Details: [MKev's Server BootPatch](../Server-BootPatch/README.md).
 
 ---
 
@@ -214,7 +217,7 @@ The **VVR guard** (`mkevmp_vvrspawnguard.lua`) is a wrapper around the spawn han
 The step-by-step behaviour is on the [ModPatcher page](../ModPatcher/README.md#the-vvr-spawn-guard).
 
 **Does it edit Workshop mods?**
-No. Everything is a runtime patch or an extra file in its own mod folder. The installer has a hard stop against writing into `steamapps\workshop`. BootPatch fixes are built from your copy into the BootPatch folder; your originals stay untouched.
+No. Everything is a runtime patch or an extra file in its own mod folder. The installer has a hard stop against writing into `steamapps\workshop`. BootPatch fixes are its own override files (built from your copy in v1.1b, bundled since 1.1.1); your originals stay untouched.
 
 **Do clients need it?**
 Yes. The server and every player need the same `mkev_modpatcher` and `mkevserverbootpatch` version, because script checksums must match. Players can use option 2, or copy the two folders into `Zomboid\mods`.
@@ -223,10 +226,10 @@ Yes. The server and every player need the same `mkev_modpatcher` and `mkevserver
 Yes. Option 1 replaces only `Mods=`, `WorkshopItems=` and `Map=` in `servertest.ini`. Passwords, ports, server name, and all other lines stay byte-for-byte. Everything is backed up first, and option 5 shows the changes without writing anything. The package itself contains no credentials.
 
 **How do I verify my download?**
-Compare the SHA256 of the current zip with [`SHA256SUMS.txt`](../../Modpatch-Installer/SHA256SUMS.txt) in `/Modpatch-Installer/`. In PowerShell: `Get-FileHash .\Modpatch-Installer-v1.1b.zip`. Hashes for the copies kept in this folder are in [`SHA256SUMS.txt`](SHA256SUMS.txt).
+Compare the SHA256 of the current zip (v1.2) with [`SHA256SUMS.txt`](../../Modpatch-Installer/SHA256SUMS.txt) in `/Modpatch-Installer/`. In PowerShell: `Get-FileHash .\Modpatch-Installer-v1.2.zip`. Hashes for the copies kept in this folder are in [`SHA256SUMS.txt`](SHA256SUMS.txt).
 
 **I updated from v1.1 or v1.0. What do I do?**
-Run the v1.1b installer again, or replace `Zomboid\mods\mkev_modpatcher` with the folder from the zip. Do it on the server and on every client.
+Run the current v1.2 installer again, or replace `Zomboid\mods\mkev_modpatcher` and `Zomboid\mods\mkevserverbootpatch` with the folders from the zip. Do it on the server and on every client.
 
 **Where do I report bugs?**
 Open an issue in this repository (MKev187/PZ-Stuff). Please include your `console.txt` or the `Zomboid\Logs\*DebugLog*.txt` lines around the error, plus the installer's `installer_log.txt`.
@@ -237,4 +240,4 @@ Open an issue in this repository (MKev187/PZ-Stuff). Please include your `consol
 
 Made by **MKev**.
 
-All mods in the [collection](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199) belong to their authors and keep full credit. Please support them on the Workshop. This package ships none of their files. It only patches at runtime, or builds fixes from your own installed copy. Root causes are documented so they can be reported to the authors.
+All mods in the [collection](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199) belong to their authors and keep full credit. Please support them on the Workshop. The v1.1b package ships none of their files; it only patches at runtime, or builds fixes from your own installed copy. From v1.2 on, Server BootPatch 1.1.1 contains three corrected script files (each an original with one documented change). Root causes are documented so they can be reported to the authors.

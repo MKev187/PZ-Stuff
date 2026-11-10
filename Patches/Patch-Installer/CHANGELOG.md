@@ -1,17 +1,17 @@
 # Changelog: MKev's Modpatch Installer
 
-Installer for the Workshop collection [MKev Zomboid Modlist B42.22 (v1.0)](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199) (ID 3827894199).
+Installer for the Workshop collection [MKev Zomboid Modlist B42.22](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199) (ID 3827894199).
 The package contains MKev's Modpatcher, the server kit, and MKev's Server BootPatch.
 English and German installers (`ModPatchInstaller_en.ps1`, `ModPatchInstaller_de.ps1`).
 
 ModPatcher history, on its own: [MKev's Modpatcher](../ModPatcher/CHANGELOG.md).
 BootPatch history, on its own: [MKev's Server BootPatch](../Server-BootPatch/CHANGELOG.md).
 
-The current v1.1b package is in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md). This folder keeps a copy of that zip, plus the earlier packages named below.
+The current package is v1.2 in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md); its changes are in [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md). This folder keeps v1.1b and the earlier packages named below.
 
 ## MKev's Modpatch Installer v1.1b — 2026-11-10
 
-**Download:** [`Modpatch-Installer-v1.1b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.1b.zip) in `/Modpatch-Installer/` (a copy with the same bytes is also in this folder)  
+**Download:** [`Modpatch-Installer-v1.1b.zip`](Modpatch-Installer-v1.1b.zip) (this folder)  
 **SHA256:** `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f`  
 Bundled ModPatcher: `mkev_modpatcher` 1.1b (also as `Modpatcher-v1.1b.zip` in [Patches/ModPatcher](../ModPatcher/), SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).
 
@@ -77,9 +77,11 @@ Installer for the collection release (base 0.3.0multi, EN/DE). Build 42.22.2, co
 
 ## Deutsch
 
+Aktuell ist v1.2 in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md) (Server BootPatch 1.1.1: Fixes fest im Mod, der Installer schreibt sie neu, wenn eine Mod aktualisiert wird). Dieser Ordner ist das Archiv.
+
 ## MKev's Modpatch Installer v1.1b — 10.11.2026
 
-**Download:** [`Modpatch-Installer-v1.1b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.1b.zip) in `/Modpatch-Installer/` (eine Kopie mit denselben Bytes liegt auch in diesem Ordner)  
+**Download:** [`Modpatch-Installer-v1.1b.zip`](Modpatch-Installer-v1.1b.zip) (dieser Ordner)  
 **SHA256:** `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f`  
 Enthaltener ModPatcher: `mkev_modpatcher` 1.1b (auch einzeln als `Modpatcher-v1.1b.zip` in [Patches/ModPatcher](../ModPatcher/), SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).
 
