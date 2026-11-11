@@ -1,15 +1,59 @@
 # Changelog: MKev's Modpatch Installer
 
-Current package in this folder: `Modpatch-Installer-v1.2.zip`.
-Older packages (`Modpatch-Installer-v1.1b.zip`, `Modpatch-Installer-v1.0.zip`, `MKev-ModPatcher-v0.3.0.zip`) are in [Patches/Patch-Installer](../Patches/Patch-Installer/README.md).
-`Modpatch-Installer-v1.1.zip` and `Modpatcher-v1.1_vvr.zip` are not stored in this repository. The hashes in the v1.1 section below are the ones published with those versions. The standalone current patcher is [`Modpatcher-v1.1b.zip`](../Patches/ModPatcher/Modpatcher-v1.1b.zip), the standalone BootPatch is [`Server-BootPatch-v1.1.1.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.1.zip).
+Current package in this folder: `Modpatch-Installer-v1.3.zip`.
+Older packages (`Modpatch-Installer-v1.2.zip`, `Modpatch-Installer-v1.1b.zip`, `Modpatch-Installer-v1.0.zip`, `MKev-ModPatcher-v0.3.0.zip`) are in [Patches/Patch-Installer](../Patches/Patch-Installer/README.md).
+`Modpatch-Installer-v1.1.zip` and `Modpatcher-v1.1_vvr.zip` are not stored in this repository. The hashes in the v1.1 section below are the ones published with those versions. The standalone current patcher is [`Modpatcher-v1.2.zip`](../Patches/ModPatcher/Modpatcher-v1.2.zip), the standalone BootPatch is [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip), Linux-Guard is in [Patches/Linux-Guard](../Patches/Linux-Guard/README.md). The older standalone zips `Modpatcher-v1.1b.zip` and `Server-BootPatch-v1.1.1.zip` are no longer stored (they are inside the archived installer v1.2).
+
+## v1.3 - 2026-11-11
+
+**Download:** [`Modpatch-Installer-v1.3.zip`](Modpatch-Installer-v1.3.zip)  
+**SHA256:** `1c41d1d5f30f972bf5235f7ee3ff41e64fafec03d9adc68e2c83a20d1aa1eff0`  
+Bundled ModPatcher: `mkev_modpatcher` **1.2** (also as [`Modpatcher-v1.2.zip`](../Patches/ModPatcher/Modpatcher-v1.2.zip), SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`).  
+Bundled BootPatch: `mkevserverbootpatch` **1.1.2** (also as [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip), SHA256 `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`).  
+New: **[Linux-Guard](../Patches/Linux-Guard/README.md) 1.0.0** (folder `Linux-Guard/`, optional, Linux dedicated servers only).
+
+### Added
+- **Linux-Guard** (`Linux-Guard/start-server.sh`, `Guide.txt`, `README.md`), made by MKev. An optional drop-in replacement for the
+  `start-server.sh` of the PZ dedicated server. At every start it checks whether the server runs on Linux (otherwise it changes
+  nothing) and whether a case fix already exists (then it does nothing extra). Otherwise it adds lowercase links next to mod files
+  and folders with capital letters (`media/AnimSets` → `media/animsets`) in `steamapps/workshop/content/108600` and `Zomboid/mods`
+  (`-cachedir=` respected). Nothing is renamed, moved or overwritten; links only point to their neighbour (no loops); a second run
+  changes nothing. Then it starts the server exactly like the original file (same Java setup, `ProjectZomboid64 "$@"`).
+  After `SERVER STARTED` it checks again: only if mods downloaded during the boot needed new links, it restarts the server once
+  with `quit` (world saved), with a loop guard (max. one automatic restart per start, none within an hour of the last one).
+  `Guide.txt` explains the 3 setups: start command changeable (wrapper, original stays), start command fixed (replace
+  `start-server.sh`, copy it in again after a PZ server update), Docker/panel regenerates the file (persistent volume + start-command
+  variable, if the image has one). Check without changes: `--linux-guard-check`; undo: `--linux-guard-undo`.
+
+### Changed
+- `mkev_modpatcher` 1.1b → **1.2**: `versionMin=42.21` (was `42.20.0`), still no `versionMax`. No functional change
+  (log line `[MKev-ModPatcher] version 1.2 loaded`). mod.info name: `MKev's Modpatcher` (id `mkev_modpatcher` unchanged).
+- `mkevserverbootpatch` 1.1.1 → **1.1.2**: docs and version only (mentions installer 1.3 and Linux-Guard). F1–F3 files and the
+  self-healing logic are byte-identical to 1.1.1. `versionMin=42.21`, no `versionMax`.
+  mod.info name: `MKev's Server BootPatch` (id `mkevserverbootpatch` unchanged).
+- Installer version 1.2 → **1.3** (`ModPatchInstaller.bat`, `ModPatchInstaller_en.ps1`, `ModPatchInstaller_de.ps1`, `VERSION.txt`,
+  ReadMe files). Modes 1 Install & set up, 2 Install only, 3 Restore, 5 Dry run are unchanged. The installer does not touch
+  `Linux-Guard/` (Windows only).
+
+### Unchanged
+- `MKevServer_setup` (376 mods / 325 WorkshopItems incl. I Know It! 3836594593 / `Map=Muldraugh, KY` / SandboxVars / preset),
+  BootPatch fixes F1–F3 and their self-healing, both languages.
+- Zip layout: the folders `mkev_modpatcher` and `mkevserverbootpatch` are at the top level and can be copied straight into the
+  `Zomboid/mods/` folder of a dedicated server; `Linux-Guard/` is the only new folder.
+
+### Upgrade from v1.2 or older
+- Players: run the v1.3 installer again (option 1 or 2), or replace `Zomboid\mods\mkev_modpatcher` and
+  `Zomboid\mods\mkevserverbootpatch` with the folders from the zip. Server and all players need the same versions (1.2 / 1.1.2).
+- Server admins: copy both folders into `Zomboid/mods/` of the server. Linux only, optional: set up Linux-Guard as described in
+  `Linux-Guard/Guide.txt`. Nothing has to be edited.
+- Check: the server log shows `[MKev-ModPatcher] version 1.2 loaded`; with Linux-Guard, `linux-guard.log` in the server folder.
 
 ## v1.2 - 2026-11-10
 
-**Download:** [`Modpatch-Installer-v1.2.zip`](Modpatch-Installer-v1.2.zip)  
+**Download:** [`Modpatch-Installer-v1.2.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.2.zip) (archive)  
 **SHA256:** `c9c6b3d48882b2136dfce0d750f1b1cb2d390e71969e79d374967dde6613a727`  
-Bundled ModPatcher: `mkev_modpatcher` 1.1b (unchanged, also as [`Modpatcher-v1.1b.zip`](../Patches/ModPatcher/Modpatcher-v1.1b.zip), SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).  
-Bundled BootPatch: `mkevserverbootpatch` **1.1.1** (also as [`Server-BootPatch-v1.1.1.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.1.zip), SHA256 `f218f38753b77cc7c0eaa2fb6aba116f403f2a21c85f8011a4167a663eb23466`).
+Bundled ModPatcher: `mkev_modpatcher` 1.1b (unchanged, also as `Modpatcher-v1.1b.zip`, SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).  
+Bundled BootPatch: `mkevserverbootpatch` **1.1.1** (also as `Server-BootPatch-v1.1.1.zip`, SHA256 `f218f38753b77cc7c0eaa2fb6aba116f403f2a21c85f8011a4167a663eb23466`).
 
 ### Changed
 - Bundled `mkevserverbootpatch`: 1.1.0 → **1.1.1**. The 3 script fixes are fixed parts of the mod again:
@@ -120,12 +164,57 @@ Installer for the collection release (base 0.3.0multi, EN/DE). Build 42.22.2, co
 
 ## Deutsch
 
+## v1.3 - 11.11.2026
+
+**Download:** [`Modpatch-Installer-v1.3.zip`](Modpatch-Installer-v1.3.zip)  
+**SHA256:** `1c41d1d5f30f972bf5235f7ee3ff41e64fafec03d9adc68e2c83a20d1aa1eff0`  
+Enthaltener ModPatcher: `mkev_modpatcher` **1.2** (auch einzeln als [`Modpatcher-v1.2.zip`](../Patches/ModPatcher/Modpatcher-v1.2.zip), SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`).  
+Enthaltener BootPatch: `mkevserverbootpatch` **1.1.2** (auch einzeln als [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip), SHA256 `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`).  
+Neu: **[Linux-Guard](../Patches/Linux-Guard/README.md) 1.0.0** (Ordner `Linux-Guard/`, optional, nur für Linux-Dedicated-Server).
+
+### Neu
+- **Linux-Guard** (`Linux-Guard/start-server.sh`, `Guide.txt`, `README.md`), Made by MKev. Ein optionaler Ersatz für die
+  `start-server.sh` des PZ-Dedicated-Servers. Bei jedem Start prüft es, ob der Server auf Linux läuft (sonst ändert es nichts) und ob
+  schon ein Case-Fix vorhanden ist (dann macht es nichts zusätzlich). Sonst legt es neben Mod-Dateien und -Ordnern mit Großbuchstaben
+  kleingeschriebene Verknüpfungen an (`media/AnimSets` → `media/animsets`), in `steamapps/workshop/content/108600` und `Zomboid/mods`
+  (`-cachedir=` wird beachtet). Nichts wird umbenannt, verschoben oder überschrieben; Verknüpfungen zeigen nur auf ihren Nachbarn
+  (keine Schleifen); ein zweiter Lauf ändert nichts. Danach startet es den Server genau wie die originale Datei (gleiche Java-Einrichtung,
+  `ProjectZomboid64 "$@"`). Nach `SERVER STARTED` prüft es noch einmal: Nur wenn beim Boot heruntergeladene Mods neue Verknüpfungen
+  brauchten, startet es den Server einmal mit `quit` neu (Welt wird gespeichert), mit Schleifensperre (höchstens ein automatischer
+  Neustart pro Start, keiner innerhalb einer Stunde nach dem letzten).
+  `Guide.txt` erklärt die 3 Fälle: Startbefehl änderbar (Wrapper, Original bleibt), Startbefehl fest (`start-server.sh` ersetzen, nach
+  einem PZ-Server-Update neu hineinlegen), Docker/Panel erzeugt die Datei neu (dauerhaftes Volume + Startbefehl-Variable, falls das Image
+  eine hat). Prüfen ohne Änderung: `--linux-guard-check`; Rückgängig: `--linux-guard-undo`.
+
+### Geändert
+- `mkev_modpatcher` 1.1b → **1.2**: `versionMin=42.21` (vorher `42.20.0`), weiterhin kein `versionMax`. Keine Funktionsänderung
+  (Log-Zeile `[MKev-ModPatcher] version 1.2 loaded`). Name in mod.info: `MKev's Modpatcher` (ID `mkev_modpatcher` unverändert).
+- `mkevserverbootpatch` 1.1.1 → **1.1.2**: nur Doku und Version (nennt Installer 1.3 und Linux-Guard). F1–F3-Dateien und die
+  Selbstheilung sind byte-gleich mit 1.1.1. `versionMin=42.21`, kein `versionMax`.
+  Name in mod.info: `MKev's Server BootPatch` (ID `mkevserverbootpatch` unverändert).
+- Installer-Version 1.2 → **1.3** (`ModPatchInstaller.bat`, `ModPatchInstaller_en.ps1`, `ModPatchInstaller_de.ps1`, `VERSION.txt`,
+  ReadMe-Dateien). Die Modi 1 Installieren & Einrichten, 2 Nur installieren, 3 Wiederherstellen, 5 Probelauf sind unverändert. Der
+  Installer fasst `Linux-Guard/` nicht an (nur Windows).
+
+### Unverändert
+- `MKevServer_setup` (376 Mods / 325 WorkshopItems inkl. I Know It! 3836594593 / `Map=Muldraugh, KY` / SandboxVars / Preset),
+  BootPatch-Fixes F1–F3 und ihre Selbstheilung, beide Sprachen.
+- Aufbau des Zips: Die Ordner `mkev_modpatcher` und `mkevserverbootpatch` liegen oben und lassen sich direkt in den `Zomboid/mods/`-Ordner
+  eines Dedicated-Servers kopieren; `Linux-Guard/` ist der einzige neue Ordner.
+
+### Update von v1.2 oder älter
+- Spieler: Den Installer v1.3 noch einmal ausführen (Option 1 oder 2), oder `Zomboid\mods\mkev_modpatcher` und
+  `Zomboid\mods\mkevserverbootpatch` durch die Ordner aus dem Zip ersetzen. Server und alle Spieler brauchen dieselben Versionen (1.2 / 1.1.2).
+- Server-Admins: Beide Ordner nach `Zomboid/mods/` des Servers kopieren. Nur Linux, optional: Linux-Guard wie in
+  `Linux-Guard/Guide.txt` beschrieben einrichten. Nichts muss bearbeitet werden.
+- Prüfen: Im Server-Log steht `[MKev-ModPatcher] version 1.2 loaded`; mit Linux-Guard gibt es `linux-guard.log` im Server-Ordner.
+
 ## v1.2 - 10.11.2026
 
-**Download:** [`Modpatch-Installer-v1.2.zip`](Modpatch-Installer-v1.2.zip)  
+**Download:** [`Modpatch-Installer-v1.2.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.2.zip) (archive)  
 **SHA256:** `c9c6b3d48882b2136dfce0d750f1b1cb2d390e71969e79d374967dde6613a727`  
-Enthaltener ModPatcher: `mkev_modpatcher` 1.1b (unverändert, auch einzeln als [`Modpatcher-v1.1b.zip`](../Patches/ModPatcher/Modpatcher-v1.1b.zip), SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).  
-Enthaltener BootPatch: `mkevserverbootpatch` **1.1.1** (auch einzeln als [`Server-BootPatch-v1.1.1.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.1.zip), SHA256 `f218f38753b77cc7c0eaa2fb6aba116f403f2a21c85f8011a4167a663eb23466`).
+Enthaltener ModPatcher: `mkev_modpatcher` 1.1b (unverändert, auch einzeln als `Modpatcher-v1.1b.zip`, SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).  
+Enthaltener BootPatch: `mkevserverbootpatch` **1.1.1** (auch einzeln als `Server-BootPatch-v1.1.1.zip`, SHA256 `f218f38753b77cc7c0eaa2fb6aba116f403f2a21c85f8011a4167a663eb23466`).
 
 ### Geändert
 - Enthaltener `mkevserverbootpatch`: 1.1.0 → **1.1.1**. Die 3 Skript-Fixes sind wieder fester Bestandteil des Mods:
