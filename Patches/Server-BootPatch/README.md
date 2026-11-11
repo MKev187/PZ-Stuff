@@ -1,12 +1,12 @@
 # MKev's Server BootPatch
 
 Small local mod that fixes script bugs other mods leave in the dedicated-server boot log.
-Mod id `mkevserverbootpatch`, current version **1.1.1**.
+Mod id `mkevserverbootpatch`, current version **1.1.2**.
 
 It is separate from [MKev's Modpatcher](../ModPatcher/README.md). Load it at the very end of `Mods=`, after `mkev_modpatcher`. The server and every client need the same version, because script checksums have to match.
 
-**Download:** [`Server-BootPatch-v1.1.1.zip`](Server-BootPatch-v1.1.1.zip) (SHA256 `f218f38753b77cc7c0eaa2fb6aba116f403f2a21c85f8011a4167a663eb23466`, also in [`SHA256SUMS.txt`](SHA256SUMS.txt)).
-The same mod is included in [MKev's Modpatch Installer v1.2](../../Modpatch-Installer/README.md).
+**Download:** [`Server-BootPatch-v1.1.2.zip`](Server-BootPatch-v1.1.2.zip) (SHA256 `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`, also in [`SHA256SUMS.txt`](SHA256SUMS.txt)).
+The same mod is included in [MKev's Modpatch Installer v1.3](../../Modpatch-Installer/README.md). 1.1.2 changes only version and docs; the fixes and the self-healing are the same as in 1.1.1.
 
 Author: **MKev**.
 
@@ -74,7 +74,7 @@ The bundled files have the same bytes as the files installer 1.1b built for 1.1.
 
 ## When the original mods update (self-healing)
 
-The bundled files are the defaults. [MKev's Modpatch Installer v1.2](../../Modpatch-Installer/README.md) (at every install), and the optional admin tools `tools/check_upstream.ps1 -Fix` (Windows) / `sh tools/check_upstream.sh --fix` (Linux, needs only `sh`, `awk`, `sha256sum`; nothing to set up) share one logic (core: `tools/bootfix.ps1`, mirrored in the shell script). Per fix they find the file the game really loads: the highest `42.x` version folder of the mod (capped by `PZ_GAMEBUILD`, for example `42.22`), else `common`, with folder and file names compared case-insensitively. Then:
+The bundled files are the defaults. [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) v1.2 and later (at every install), and the optional admin tools `tools/check_upstream.ps1 -Fix` (Windows) / `sh tools/check_upstream.sh --fix` (Linux, needs only `sh`, `awk`, `sha256sum`; nothing to set up) share one logic (core: `tools/bootfix.ps1`, mirrored in the shell script). Per fix they find the file the game really loads: the highest `42.x` version folder of the mod (capped by `PZ_GAMEBUILD`, for example `42.22`), else `common`, with folder and file names compared case-insensitively. Then:
 
 | Case | Status | What happens |
 |---|---|---|
@@ -95,8 +95,8 @@ The three upstream problems, and a short list of other boot-log notes this mod d
 
 ## Install
 
-- **Windows (player or server):** use [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) v1.2 (option 1 or 2), or extract `Server-BootPatch-v1.1.1.zip` into `%USERPROFILE%\Zomboid\mods\`.
-- **Linux dedicated server:** extract `Server-BootPatch-v1.1.1.zip` into the server's `Zomboid/mods/` folder (for example `/serverdata/serverfiles/Zomboid/mods/mkevserverbootpatch/`) and keep `mkevserverbootpatch` last in `Mods=`. That's all - no start script or other server file has to be changed. `tools/check_upstream.sh` is only an optional tool for admins who want to check the fixes by hand.
+- **Windows (player or server):** use [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) v1.3 (option 1 or 2), or extract `Server-BootPatch-v1.1.2.zip` into `%USERPROFILE%\Zomboid\mods\`.
+- **Linux dedicated server:** extract `Server-BootPatch-v1.1.2.zip` into the server's `Zomboid/mods/` folder (the folder that contains `Server/` and `Saves/`, giving `Zomboid/mods/mkevserverbootpatch/`) and keep `mkevserverbootpatch` last in `Mods=`. That's all - no start script or other server file has to be changed. `tools/check_upstream.sh` is only an optional tool for admins who want to check the fixes by hand. Case problems of *other* mods on Linux (files not found because of upper/lower case) are not part of this mod; for them the installer zip brings the optional [MKev's Linux-Guard](../Linux-Guard/README.md).
 - Check after the next start: the log shows `mod "mkevserverbootpatch" overrides media/scripts/recipes/recipes_fletching.txt` (and the two other files), and the F1–F3 messages above are gone.
 
 History of this mod: [`CHANGELOG.md`](CHANGELOG.md).

@@ -2,11 +2,23 @@
 
 Mod id `mkev_modpatcher`. The folder name and the mod id do not change between versions, so the `Mods=` entry stays `mkev_modpatcher`.
 
-Version scheme: internal builds through 2026-10-31 used `0.1.<n>`. Older labels `1.1` through `1.8` map to `0.1.1` through `0.1.8` (an installed 1.8 build stayed labeled 1.8). From 2026-11-10 the public builds are `1.1_vvr` and `1.1b`. There is no standalone zip for the `0.1.x` or `1.x` builds; those shipped only inside the installer package. The build-by-build notes below for 0.1.11 and earlier are the mod's own `CHANGELOG.md` from `Modpatcher-v1.1b.zip`, with the installer-package notes left out.
+Version scheme: internal builds through 2026-10-31 used `0.1.<n>`. Older labels `1.1` through `1.8` map to `0.1.1` through `0.1.8` (an installed 1.8 build stayed labeled 1.8). From 2026-11-10 the public builds are `1.1_vvr`, `1.1b` and `1.2`. There is no standalone zip for the `0.1.x` or `1.x` builds; those shipped only inside the installer package. The build-by-build notes below for 0.1.11 and earlier are the mod's own `CHANGELOG.md` from `Modpatcher-v1.1b.zip`, with the installer-package notes left out.
+
+## MKev's Modpatcher v1.2 — 2026-11-11
+
+**Download:** [`Modpatcher-v1.2.zip`](Modpatcher-v1.2.zip)  
+**SHA256:** `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`
+
+1.2 is 1.1b without a functional change. It ships with MKev's Modpatch Installer v1.3.
+
+### Changed
+- `mod.info`: `versionMin=42.21` (was `42.20.0`), still no `versionMax`, so later game updates do not lock the mod. modversion `1.2`.
+- `mod.info` name: `MKev's Modpatcher` (was `MKev-ModPatcher v1.1b`). Only the name in the mod list changes; the id `mkev_modpatcher` stays, so server `Mods=` lines and saves need no change.
+- `mkevmp_version.lua`: `1.2`. The log shows `[MKev-ModPatcher] version 1.2 loaded`. Server and every player need 1.2, because the Lua checksum changes.
 
 ## MKev's Modpatcher v1.1b — 2026-11-10
 
-**Download:** `Modpatcher-v1.1b.zip`  
+**Download:** `Modpatcher-v1.1b.zip` (no longer stored in this repository; inside the archived installer v1.2)  
 **SHA256:** `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`
 
 1.1b is 1.1_vvr plus the Tweed jacket fix. The VVR guard change from 1.1_vvr is unchanged.

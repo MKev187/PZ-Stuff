@@ -1,6 +1,15 @@
 # Changelog: MKev's Server BootPatch
 
-Mod id `mkevserverbootpatch`. Current version **1.1.1**. Standalone zip: [`Server-BootPatch-v1.1.1.zip`](Server-BootPatch-v1.1.1.zip). The same mod ships inside [MKev's Modpatch Installer v1.2](../../Modpatch-Installer/README.md).
+Mod id `mkevserverbootpatch`. Current version **1.1.2**. Standalone zip: [`Server-BootPatch-v1.1.2.zip`](Server-BootPatch-v1.1.2.zip). The same mod ships inside [MKev's Modpatch Installer v1.3](../../Modpatch-Installer/README.md).
+
+## MKev's Server BootPatch 1.1.2 — 2026-11-11
+
+**SHA256** of `Server-BootPatch-v1.1.2.zip`: `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`
+
+- Version and docs only. It ships with [MKev's Modpatch Installer v1.3](../../Modpatch-Installer/CHANGELOG.md). The F1–F3 files, the placeholders and the self-healing logic (`tools/bootfix.ps1`, `tools/check_upstream.ps1`, `tools/check_upstream.sh`) are the same as in 1.1.1; only their header comments name 1.1.2.
+- `mod.info` and READMEs: the installer is named as "1.2 or newer"; a note says that Linux case problems of other mods are handled by the optional [MKev's Linux-Guard](../Linux-Guard/README.md), not by this mod. `versionMin=42.21`, no `versionMax`.
+- `mod.info` name: `MKev's Server BootPatch` (was `MKevServerBootPatch v1.1.1`). Only the name in the mod list changes; the id `mkevserverbootpatch` stays.
+- The standalone `Server-BootPatch-v1.1.1.zip` (SHA256 `f218f38753b77cc7c0eaa2fb6aba116f403f2a21c85f8011a4167a663eb23466`) is no longer stored in this repository; 1.1.1 is inside the archived installer v1.2.
 
 ## MKev's Server BootPatch 1.1.1 — 2026-11-10
 

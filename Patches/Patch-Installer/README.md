@@ -1,8 +1,8 @@
 # MKev's Modpatch Installer
 
 This folder is the archive of previous installer packages, not the current release.
-Download the current build (v1.2) from [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) ([`/Modpatch-Installer/Modpatch-Installer-v1.2.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.2.zip)).
-The description below is the one of the archived v1.1b package. What changed in v1.2 (Server BootPatch 1.1.1: fixes bundled, rewritten by the installer when a mod updates): [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md).
+Download the current build (v1.3) from [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) ([`/Modpatch-Installer/Modpatch-Installer-v1.3.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.3.zip)).
+The description below is the one of the archived v1.1b package. What changed in v1.2 (Server BootPatch 1.1.1: fixes bundled, rewritten by the installer when a mod updates) and in v1.3 (ModPatcher 1.2, BootPatch 1.1.2, new optional Linux-Guard for Linux servers): [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md).
 
 One download that sets up a dedicated server and the clients for a 376-mod Project Zomboid Build 42 multiplayer list.
 Every fix is matched to a specific error from a real server log, and every one is a runtime patch or a file built into the patch mods' own folders.
@@ -18,7 +18,7 @@ The installer is in English and German. `ModPatchInstaller.bat` asks which langu
 
 - **Game:** Project Zomboid Build **42.22.2**, multiplayer (dedicated server and clients)
 - **Collection:** [MKev Zomboid Modlist B42.22, Workshop 3827894199](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199)
-- **Current release:** [`Modpatch-Installer-v1.2.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.2.zip) in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md). This folder keeps v1.1b and the older packages below.
+- **Current release:** [`Modpatch-Installer-v1.3.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.3.zip) in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md). This folder keeps v1.2, v1.1b and the older packages below.
 
 Deeper docs, kept next to this folder:
 
@@ -35,28 +35,31 @@ Current release, in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md)
 
 | File | Version | SHA256 |
 |---|---|---|
-| **[`Modpatch-Installer-v1.2.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.2.zip)** | Installer 1.2 + ModPatcher 1.1b + BootPatch 1.1.1 | `c9c6b3d48882b2136dfce0d750f1b1cb2d390e71969e79d374967dde6613a727` |
+| **[`Modpatch-Installer-v1.3.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.3.zip)** | Installer 1.3 + ModPatcher 1.2 + BootPatch 1.1.2 + Linux-Guard 1.0.0 | `1c41d1d5f30f972bf5235f7ee3ff41e64fafec03d9adc68e2c83a20d1aa1eff0` |
 
 Files still in this folder:
 
 | File | Version | SHA256 |
 |---|---|---|
+| `Modpatch-Installer-v1.2.zip` | Installer 1.2 (ModPatcher 1.1b + BootPatch 1.1.1) | `c9c6b3d48882b2136dfce0d750f1b1cb2d390e71969e79d374967dde6613a727` |
 | `Modpatch-Installer-v1.1b.zip` | Installer 1.1b (ModPatcher 1.1b + BootPatch 1.1.0) | `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f` |
 | `Modpatch-Installer-v1.0.zip` | Installer 1.0 (ModPatcher 0.1.11 + BootPatch 1.1.0) | `12b5647a6a1744a0a5ac6507948356dfc3f0d7c09741c7d1c458b7b3f06b03b2` |
 | `MKev-ModPatcher-v0.3.0.zip` | Older package for Build 42.21 (reference only). The filename is the one that package was published under. | `0b671a66e3aed9fd868eecb69533170b84268f098f9d8e27ec93b57fb517d50c` |
 
 All hashes for the zips in this folder are also in [`SHA256SUMS.txt`](SHA256SUMS.txt). What changed in each installer version: [`CHANGELOG.md`](CHANGELOG.md).
 
-Standalone ModPatcher, current build only: [`Modpatcher-v1.1b.zip`](../ModPatcher/Modpatcher-v1.1b.zip) in [Patches/ModPatcher](../ModPatcher/README.md) (SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).
+Standalone ModPatcher, current build only: [`Modpatcher-v1.2.zip`](../ModPatcher/Modpatcher-v1.2.zip) in [Patches/ModPatcher](../ModPatcher/README.md) (SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`).
 
-These two archives are described in the changelog and are not stored in this repository:
+These archives are described in the changelogs and are not stored in this repository:
 
 | File | Version | SHA256 |
 |---|---|---|
 | `Modpatch-Installer-v1.1.zip` | Installer 1.1 (ModPatcher 1.1_vvr + BootPatch 1.1.0) | `8ac543cb9be7548a1ac6da04eb478caa3165f7dc86227f915a3055612ecaec3c` |
 | `Modpatcher-v1.1_vvr.zip` | ModPatcher 1.1_vvr only | `e1f7c4690fc15e0c11f793bfe08b5c35d4423c2a4a2c86fc991d5d81bc6cfe3a` |
+| `Modpatcher-v1.1b.zip` | ModPatcher 1.1b only (also inside v1.2 and v1.1b) | `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc` |
+| `Server-BootPatch-v1.1.1.zip` | BootPatch 1.1.1 only (also inside v1.2) | `f218f38753b77cc7c0eaa2fb6aba116f403f2a21c85f8011a4167a663eb23466` |
 
-Standalone Server BootPatch (current only): [`Server-BootPatch-v1.1.1.zip`](../Server-BootPatch/Server-BootPatch-v1.1.1.zip) (SHA256 `f218f38753b77cc7c0eaa2fb6aba116f403f2a21c85f8011a4167a663eb23466`). There is no standalone BootPatch zip for 1.1.0 and no standalone ModPatcher zip for 1.0 or 0.1.11.
+Standalone Server BootPatch (current only): [`Server-BootPatch-v1.1.2.zip`](../Server-BootPatch/Server-BootPatch-v1.1.2.zip) (SHA256 `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`). There is no standalone BootPatch zip for 1.1.0 and no standalone ModPatcher zip for 1.0 or 0.1.11.
 
 ---
 
@@ -106,7 +109,7 @@ Two scripts with the same logic: `ModPatchInstaller_en.ps1` and `ModPatchInstall
 - **No secrets shipped:** the package contains no `servertest.ini`, only the three list values (`Mods=`, `WorkshopItems=`, `Map=`) as separate text files.
 - **Steam libraries:** finds Workshop folders through `libraryfolders.vdf`. `PZ_WORKSHOP` overrides this, pointing at `...\steamapps\workshop\content\108600`.
 
-`VERSION.txt` in the v1.1b zip records installer 1.1b, ModPatcher 1.1b, BootPatch 1.1.0, and the server kit below. The v1.2 zip records installer 1.2, ModPatcher 1.1b, BootPatch 1.1.1 and the same server kit.
+`VERSION.txt` in the v1.1b zip records installer 1.1b, ModPatcher 1.1b, BootPatch 1.1.0, and the server kit below. The v1.2 zip records installer 1.2, ModPatcher 1.1b, BootPatch 1.1.1 and the same server kit; the v1.3 zip installer 1.3, ModPatcher 1.2, BootPatch 1.1.2, Linux-Guard 1.0.0 and the same server kit.
 
 ---
 
@@ -226,10 +229,10 @@ Yes. The server and every player need the same `mkev_modpatcher` and `mkevserver
 Yes. Option 1 replaces only `Mods=`, `WorkshopItems=` and `Map=` in `servertest.ini`. Passwords, ports, server name, and all other lines stay byte-for-byte. Everything is backed up first, and option 5 shows the changes without writing anything. The package itself contains no credentials.
 
 **How do I verify my download?**
-Compare the SHA256 of the current zip (v1.2) with [`SHA256SUMS.txt`](../../Modpatch-Installer/SHA256SUMS.txt) in `/Modpatch-Installer/`. In PowerShell: `Get-FileHash .\Modpatch-Installer-v1.2.zip`. Hashes for the copies kept in this folder are in [`SHA256SUMS.txt`](SHA256SUMS.txt).
+Compare the SHA256 of the current zip (v1.3) with [`SHA256SUMS.txt`](../../Modpatch-Installer/SHA256SUMS.txt) in `/Modpatch-Installer/`. In PowerShell: `Get-FileHash .\Modpatch-Installer-v1.3.zip`. Hashes for the copies kept in this folder are in [`SHA256SUMS.txt`](SHA256SUMS.txt).
 
 **I updated from v1.1 or v1.0. What do I do?**
-Run the current v1.2 installer again, or replace `Zomboid\mods\mkev_modpatcher` and `Zomboid\mods\mkevserverbootpatch` with the folders from the zip. Do it on the server and on every client.
+Run the current v1.3 installer again, or replace `Zomboid\mods\mkev_modpatcher` and `Zomboid\mods\mkevserverbootpatch` with the folders from the zip. Do it on the server and on every client.
 
 **Where do I report bugs?**
 Open an issue in this repository (MKev187/PZ-Stuff). Please include your `console.txt` or the `Zomboid\Logs\*DebugLog*.txt` lines around the error, plus the installer's `installer_log.txt`.

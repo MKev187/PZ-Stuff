@@ -7,13 +7,13 @@ English and German installers (`ModPatchInstaller_en.ps1`, `ModPatchInstaller_de
 ModPatcher history, on its own: [MKev's Modpatcher](../ModPatcher/CHANGELOG.md).
 BootPatch history, on its own: [MKev's Server BootPatch](../Server-BootPatch/CHANGELOG.md).
 
-The current package is v1.2 in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md); its changes are in [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md). This folder keeps v1.1b and the earlier packages named below.
+The current package is v1.3 in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md); the changes of v1.3 and v1.2 are in [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md). This folder keeps v1.2 ([`Modpatch-Installer-v1.2.zip`](Modpatch-Installer-v1.2.zip), SHA256 `c9c6b3d48882b2136dfce0d750f1b1cb2d390e71969e79d374967dde6613a727`), v1.1b and the earlier packages named below.
 
 ## MKev's Modpatch Installer v1.1b — 2026-11-10
 
 **Download:** [`Modpatch-Installer-v1.1b.zip`](Modpatch-Installer-v1.1b.zip) (this folder)  
 **SHA256:** `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f`  
-Bundled ModPatcher: `mkev_modpatcher` 1.1b (also as `Modpatcher-v1.1b.zip` in [Patches/ModPatcher](../ModPatcher/), SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).
+Bundled ModPatcher: `mkev_modpatcher` 1.1b (also as `Modpatcher-v1.1b.zip`, no longer stored, SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).
 
 ### Changed
 - Bundled `mkev_modpatcher`: 1.1_vvr → **1.1b** (Hotfix Tweed jacket). The VVR change of 1.1_vvr is kept. Mod id stays `mkev_modpatcher`.
@@ -77,13 +77,13 @@ Installer for the collection release (base 0.3.0multi, EN/DE). Build 42.22.2, co
 
 ## Deutsch
 
-Aktuell ist v1.2 in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md) (Server BootPatch 1.1.1: Fixes fest im Mod, der Installer schreibt sie neu, wenn eine Mod aktualisiert wird). Dieser Ordner ist das Archiv.
+Aktuell ist v1.3 in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md) (ModPatcher 1.2, BootPatch 1.1.2, neu: optionaler Linux-Guard für Linux-Server); die Änderungen von v1.3 und v1.2 stehen in [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md). Dieser Ordner ist das Archiv, mit v1.2 ([`Modpatch-Installer-v1.2.zip`](Modpatch-Installer-v1.2.zip)), v1.1b und älteren Paketen.
 
 ## MKev's Modpatch Installer v1.1b — 10.11.2026
 
 **Download:** [`Modpatch-Installer-v1.1b.zip`](Modpatch-Installer-v1.1b.zip) (dieser Ordner)  
 **SHA256:** `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f`  
-Enthaltener ModPatcher: `mkev_modpatcher` 1.1b (auch einzeln als `Modpatcher-v1.1b.zip` in [Patches/ModPatcher](../ModPatcher/), SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).
+Enthaltener ModPatcher: `mkev_modpatcher` 1.1b (auch einzeln als `Modpatcher-v1.1b.zip`, nicht mehr im Repo, SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`).
 
 ### Geändert
 - Enthaltener `mkev_modpatcher`: 1.1_vvr → **1.1b** (Hotfix Tweedjacke). Die VVR-Änderung aus 1.1_vvr bleibt drin. Die Mod-ID bleibt `mkev_modpatcher`.

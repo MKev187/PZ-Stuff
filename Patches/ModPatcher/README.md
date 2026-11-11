@@ -1,7 +1,7 @@
 # MKev's Modpatcher
 
 Local compatibility mod for the MKev Project Zomboid Build 42 multiplayer setup.
-Mod id `mkev_modpatcher`, current version **1.1b** (2026-11-10). It loads **last** and fixes other mods while the game runs.
+Mod id `mkev_modpatcher`, current version **1.2** (2026-11-11). It loads **last** and fixes other mods while the game runs.
 
 Workshop originals are never edited. Every fix is either runtime Lua in this mod, or an extra file in this mod's own folder. Nothing is written under `steamapps\workshop`.
 
@@ -17,13 +17,13 @@ The all-in-one server and client setup (this mod, the server kit, and the Server
 
 | File | Version | SHA256 |
 |---|---|---|
-| **`Modpatcher-v1.1b.zip`** (current) | `mkev_modpatcher` 1.1b | `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc` |
+| **[`Modpatcher-v1.2.zip`](Modpatcher-v1.2.zip)** (current) | `mkev_modpatcher` 1.2 | `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17` |
 
 Hashes are also in [`SHA256SUMS.txt`](SHA256SUMS.txt). History: [`CHANGELOG.md`](CHANGELOG.md).
 
-`Modpatcher-v1.1_vvr.zip` (SHA256 `e1f7c4690fc15e0c11f793bfe08b5c35d4423c2a4a2c86fc991d5d81bc6cfe3a`) is the previous standalone build. That archive is not in this repository. There is no standalone zip for 1.0 or for 0.1.11. Installer v1.0 still bundled patcher 0.1.11; see [MKev's Modpatch Installer](../Patch-Installer/README.md).
+`Modpatcher-v1.1b.zip` (SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`) and `Modpatcher-v1.1_vvr.zip` (SHA256 `e1f7c4690fc15e0c11f793bfe08b5c35d4423c2a4a2c86fc991d5d81bc6cfe3a`) are the previous standalone builds. These archives are not in this repository (1.1b is still inside the archived installers v1.2 and v1.1b). There is no standalone zip for 1.0 or for 0.1.11. Installer v1.0 still bundled patcher 0.1.11; see [MKev's Modpatch Installer](../Patch-Installer/README.md).
 
-Check the log for `[MKev-ModPatcher] version 1.1b loaded`.
+Check the log for `[MKev-ModPatcher] version 1.2 loaded`.
 
 ### Install the standalone zip
 
@@ -108,6 +108,10 @@ The guard was added in 0.1.8 (internal label 1.8) on 2026-10-30. From 0.1.8 thro
 - Non-vanilla vehicles are left to VVR, which returns on its own.
 
 One server log line per vehicle: `VVR guard: replaced <script> -> <target> at x,y`, `FAILED ...`, or `kept ...`. At most 20 lines per 60 seconds; further lines are counted. Startup line: `VVR spawn guard active (dedicated server, 1.1_vvr: vanilla vehicles are replaced).`
+
+### What 1.2 changed
+
+1.2 is 1.1b without a functional change. `mod.info` now has `versionMin=42.21` (was `42.20.0`) and still no `versionMax`, so later game updates do not lock the mod. The version file says `1.2`, so the server and every player need 1.2 (the Lua checksum changes). It ships with MKev's Modpatch Installer v1.3.
 
 ### What 1.1b changed
 
