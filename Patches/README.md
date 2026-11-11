@@ -10,7 +10,7 @@ Author: **MKev**.
 
 | Package | Version | What it is for |
 |---|---|---|
-| [MKev's Modpatch Installer](../Modpatch-Installer/README.md) | **1.3** | The download most people should use. One package for the dedicated server and for every player. |
+| [MKev's Modpatch Installer](../Modpatch-Installer/README.md) | **1.3b** | The download most people should use. One package for the dedicated server and for every player. |
 | [MKev's Modpatcher](ModPatcher/README.md) | **1.2** | The core runtime patch. It is already inside the installer. A standalone zip is in `ModPatcher/` if you only need the patcher. |
 | [MKev's Server BootPatch](Server-BootPatch/README.md) | **1.1.2** | Boot-log script fixes, bundled in the mod. Inside the installer, and as a standalone zip in `Server-BootPatch/` (for example for a Linux server). |
 | [MKev's Linux-Guard](Linux-Guard/README.md) | **1.0.0** | Optional `start-server.sh` for Linux dedicated servers: lowercase links for mod files Linux does not find because of upper/lower case. Inside the installer zip (folder `Linux-Guard/`) and in `Linux-Guard/`. |
@@ -23,9 +23,9 @@ MKev's Modpatch Installer is the all-in-one package. It contains MKev's Modpatch
 
 The current zip is at the repository root, in [Modpatch-Installer](../Modpatch-Installer/README.md):
 
-- [Modpatch-Installer-v1.3.zip](../Modpatch-Installer/Modpatch-Installer-v1.3.zip)
+- [Modpatch-Installer-v1.3b.zip](../Modpatch-Installer/Modpatch-Installer-v1.3b.zip) (hotfix of v1.3: fixed missing parameters in server files)
 - Install notes: [MKev's Modpatch Installer](../Modpatch-Installer/README.md)
-- Release: [Modpatch-Installer-v1.3](https://github.com/MKev187/PZ-Stuff/releases/tag/Modpatch-Installer-v1.3)
+- Release: [Modpatch-Installer-v1.3b](https://github.com/MKev187/PZ-Stuff/releases/tag/Modpatch-Installer-v1.3b)
 
 On Windows, close the game and your own PZ server, extract the whole zip, and start `ModPatchInstaller.bat`. The installer refuses to run while either one is running. It then asks which language to use: English or German.
 
@@ -72,7 +72,7 @@ Still in that folder:
 
 [Server-BootPatch/](Server-BootPatch/README.md) is a small second mod, id `mkevserverbootpatch`, version **1.1.2**. Load it at the very end of `Mods=`, after `mkev_modpatcher`. It fixes script bugs that show up in the dedicated-server boot log.
 
-Version 1.1.2 comes with installer v1.3 and as the standalone zip [Server-BootPatch-v1.1.2.zip](Server-BootPatch/Server-BootPatch-v1.1.2.zip) (1.1.2 changes only version and docs; the fixes are the same as in 1.1.1). The three script fixes are fixed override files inside this mod (until 1.1.0 the installer built them at install time, which never happened on Linux servers). Your Workshop copies stay as they were.
+Version 1.1.2 comes with installer v1.3 / v1.3b and as the standalone zip [Server-BootPatch-v1.1.2.zip](Server-BootPatch/Server-BootPatch-v1.1.2.zip) (1.1.2 changes only version and docs; the fixes are the same as in 1.1.1). The three script fixes are fixed override files inside this mod (until 1.1.0 the installer built them at install time, which never happened on Linux servers). Your Workshop copies stay as they were.
 
 - **Archery Nexus [Fixed].** The recipe "Assemble A Primitive Hunting Bow" asks for the perk `Carpentry:3`. That id is not a Build 42 perk. The fixed file uses `Woodwork:3`.
 - **Mad Crafter.** Two recipes use `Electrical:` where the perk id is `Electricity:` (six places). Requirement, autolearn, and XP work again.

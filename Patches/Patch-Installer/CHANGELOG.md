@@ -7,7 +7,7 @@ English and German installers (`ModPatchInstaller_en.ps1`, `ModPatchInstaller_de
 ModPatcher history, on its own: [MKev's Modpatcher](../ModPatcher/CHANGELOG.md).
 BootPatch history, on its own: [MKev's Server BootPatch](../Server-BootPatch/CHANGELOG.md).
 
-The current package is v1.3 in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md); the changes of v1.3 and v1.2 are in [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md). This folder keeps v1.2 ([`Modpatch-Installer-v1.2.zip`](Modpatch-Installer-v1.2.zip), SHA256 `c9c6b3d48882b2136dfce0d750f1b1cb2d390e71969e79d374967dde6613a727`), v1.1b and the earlier packages named below.
+The current package is v1.3b in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md); the changes of v1.3b, v1.3 and v1.2 are in [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md). This folder keeps v1.3 ([`Modpatch-Installer-v1.3.zip`](Modpatch-Installer-v1.3.zip), SHA256 `1c41d1d5f30f972bf5235f7ee3ff41e64fafec03d9adc68e2c83a20d1aa1eff0`), v1.2 ([`Modpatch-Installer-v1.2.zip`](Modpatch-Installer-v1.2.zip), SHA256 `c9c6b3d48882b2136dfce0d750f1b1cb2d390e71969e79d374967dde6613a727`), v1.1b and the earlier packages named below.
 
 ## MKev's Modpatch Installer v1.1b — 2026-11-10
 
@@ -77,7 +77,7 @@ Installer for the collection release (base 0.3.0multi, EN/DE). Build 42.22.2, co
 
 ## Deutsch
 
-Aktuell ist v1.3 in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md) (ModPatcher 1.2, BootPatch 1.1.2, neu: optionaler Linux-Guard für Linux-Server); die Änderungen von v1.3 und v1.2 stehen in [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md). Dieser Ordner ist das Archiv, mit v1.2 ([`Modpatch-Installer-v1.2.zip`](Modpatch-Installer-v1.2.zip)), v1.1b und älteren Paketen.
+Aktuell ist v1.3b in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md) (Hotfix von v1.3: fehlende Parameter in den Server-Dateien ergänzt; ModPatcher 1.2, BootPatch 1.1.2, optionaler Linux-Guard); die Änderungen von v1.3b, v1.3 und v1.2 stehen in [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md). Dieser Ordner ist das Archiv, mit v1.3 ([`Modpatch-Installer-v1.3.zip`](Modpatch-Installer-v1.3.zip)), v1.2 ([`Modpatch-Installer-v1.2.zip`](Modpatch-Installer-v1.2.zip)), v1.1b und älteren Paketen.
 
 ## MKev's Modpatch Installer v1.1b — 10.11.2026
 

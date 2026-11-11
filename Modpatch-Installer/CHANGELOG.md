@@ -1,12 +1,34 @@
 # Changelog: MKev's Modpatch Installer
 
-Current package in this folder: `Modpatch-Installer-v1.3.zip`.
-Older packages (`Modpatch-Installer-v1.2.zip`, `Modpatch-Installer-v1.1b.zip`, `Modpatch-Installer-v1.0.zip`, `MKev-ModPatcher-v0.3.0.zip`) are in [Patches/Patch-Installer](../Patches/Patch-Installer/README.md).
+Current package in this folder: `Modpatch-Installer-v1.3b.zip`.
+Older packages (`Modpatch-Installer-v1.3.zip`, `Modpatch-Installer-v1.2.zip`, `Modpatch-Installer-v1.1b.zip`, `Modpatch-Installer-v1.0.zip`, `MKev-ModPatcher-v0.3.0.zip`) are in [Patches/Patch-Installer](../Patches/Patch-Installer/README.md).
 `Modpatch-Installer-v1.1.zip` and `Modpatcher-v1.1_vvr.zip` are not stored in this repository. The hashes in the v1.1 section below are the ones published with those versions. The standalone current patcher is [`Modpatcher-v1.2.zip`](../Patches/ModPatcher/Modpatcher-v1.2.zip), the standalone BootPatch is [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip), Linux-Guard is in [Patches/Linux-Guard](../Patches/Linux-Guard/README.md). The older standalone zips `Modpatcher-v1.1b.zip` and `Server-BootPatch-v1.1.1.zip` are no longer stored (they are inside the archived installer v1.2).
+
+## v1.3b - 2026-11-11 (hotfix)
+
+**Download:** [`Modpatch-Installer-v1.3b.zip`](Modpatch-Installer-v1.3b.zip)  
+**SHA256:** `f639288657025525ebfdcf702a416292e0e0c8e9cb33525d7c59c4bdc5f65f7c`  
+Bundled mods unchanged from v1.3 (byte-identical): `mkev_modpatcher` 1.2, `mkevserverbootpatch` 1.1.2, Linux-Guard 1.0.0.
+
+### Fixed
+- fixed missing parameters in server files.
+- `MKevServer_setup/MKevServer_SandboxVars.lua`: the 11 options of Wolf's Extraction Quest (`WQS_*`) were missing. Servers using
+  the file therefore ran the mod defaults, and the extraction quest started right at the beginning. Now included, with
+  `WQS_GameModeExtended_opt = true` (the quest is not active at the start and only begins after crafting the antenna).
+  Also added: the 3 newer `SIMBAproduz_TSY` options `AlertFromPresenceScreams`, `AlertFromCloseScreams`, `AlertFromHuntScreams`
+  (all `true`).
+- Same file, values brought back in line with the MKev server: `ImmersiveBlackouts.WaterShutoffDayRange = "1-30"` (was `"0-30"`);
+  Wandering Zombies `Hordes = true`, `Merge = true`, `MaxHordeHomingTotalHours = 0`, `MaxHordeToPlayers = 0`
+  (were `false`, `false`, `24`, `20`). All other values are the same as in v1.3; nothing was removed. The file now has English comments.
+
+### Upgrade from v1.3
+- Server admins: replace `Zomboid/Server/<servername>_SandboxVars.lua` with `MKevServer_setup/MKevServer_SandboxVars.lua`
+  (back up your own file first) and restart the server. Or run the installer, option 1.
+- Players: nothing to do. The mods did not change, so v1.3 and v1.3b players can join the same server.
 
 ## v1.3 - 2026-11-11
 
-**Download:** [`Modpatch-Installer-v1.3.zip`](Modpatch-Installer-v1.3.zip)  
+**Download:** [`Modpatch-Installer-v1.3.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.3.zip) (archive)  
 **SHA256:** `1c41d1d5f30f972bf5235f7ee3ff41e64fafec03d9adc68e2c83a20d1aa1eff0`  
 Bundled ModPatcher: `mkev_modpatcher` **1.2** (also as [`Modpatcher-v1.2.zip`](../Patches/ModPatcher/Modpatcher-v1.2.zip), SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`).  
 Bundled BootPatch: `mkevserverbootpatch` **1.1.2** (also as [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip), SHA256 `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`).  
@@ -164,9 +186,32 @@ Installer for the collection release (base 0.3.0multi, EN/DE). Build 42.22.2, co
 
 ## Deutsch
 
+## v1.3b - 11.11.2026 (Hotfix)
+
+**Download:** [`Modpatch-Installer-v1.3b.zip`](Modpatch-Installer-v1.3b.zip)  
+**SHA256:** `f639288657025525ebfdcf702a416292e0e0c8e9cb33525d7c59c4bdc5f65f7c`  
+Mitgelieferte Mods unverändert zu v1.3 (bytegleich): `mkev_modpatcher` 1.2, `mkevserverbootpatch` 1.1.2, Linux-Guard 1.0.0.
+
+### Behoben
+- fixed missing parameters in server files.
+- `MKevServer_setup/MKevServer_SandboxVars.lua`: Die 11 Optionen von Wolf's Extraction Quest (`WQS_*`) fehlten. Server mit dieser
+  Datei liefen deshalb mit den Standardwerten der Mod, und die Extraction Quest startete gleich zu Beginn. Jetzt enthalten, mit
+  `WQS_GameModeExtended_opt = true` (die Quest ist am Anfang nicht aktiv und beginnt erst, wenn die Antenne gebaut ist).
+  Außerdem ergänzt: die 3 neueren `SIMBAproduz_TSY`-Optionen `AlertFromPresenceScreams`, `AlertFromCloseScreams`,
+  `AlertFromHuntScreams` (alle `true`).
+- In derselben Datei an den MKev-Server angeglichen: `ImmersiveBlackouts.WaterShutoffDayRange = "1-30"` (war `"0-30"`);
+  Wandering Zombies `Hordes = true`, `Merge = true`, `MaxHordeHomingTotalHours = 0`, `MaxHordeToPlayers = 0`
+  (waren `false`, `false`, `24`, `20`). Alle anderen Werte sind wie in v1.3, entfernt wurde nichts. Die Datei hat jetzt englische
+  Kommentare.
+
+### Update von v1.3
+- Server-Admins: `Zomboid/Server/<Servername>_SandboxVars.lua` durch `MKevServer_setup/MKevServer_SandboxVars.lua` ersetzen
+  (vorher die eigene Datei sichern) und den Server neu starten. Oder den Installer mit Option 1 ausführen.
+- Spieler: nichts zu tun. Die Mods sind gleich geblieben, Spieler mit v1.3 und v1.3b können auf denselben Server.
+
 ## v1.3 - 11.11.2026
 
-**Download:** [`Modpatch-Installer-v1.3.zip`](Modpatch-Installer-v1.3.zip)  
+**Download:** [`Modpatch-Installer-v1.3.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.3.zip) (Archiv)  
 **SHA256:** `1c41d1d5f30f972bf5235f7ee3ff41e64fafec03d9adc68e2c83a20d1aa1eff0`  
 Enthaltener ModPatcher: `mkev_modpatcher` **1.2** (auch einzeln als [`Modpatcher-v1.2.zip`](../Patches/ModPatcher/Modpatcher-v1.2.zip), SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`).  
 Enthaltener BootPatch: `mkevserverbootpatch` **1.1.2** (auch einzeln als [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip), SHA256 `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`).  

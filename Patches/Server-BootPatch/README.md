@@ -6,7 +6,7 @@ Mod id `mkevserverbootpatch`, current version **1.1.2**.
 It is separate from [MKev's Modpatcher](../ModPatcher/README.md). Load it at the very end of `Mods=`, after `mkev_modpatcher`. The server and every client need the same version, because script checksums have to match.
 
 **Download:** [`Server-BootPatch-v1.1.2.zip`](Server-BootPatch-v1.1.2.zip) (SHA256 `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`, also in [`SHA256SUMS.txt`](SHA256SUMS.txt)).
-The same mod is included in [MKev's Modpatch Installer v1.3](../../Modpatch-Installer/README.md). 1.1.2 changes only version and docs; the fixes and the self-healing are the same as in 1.1.1.
+The same mod is included in [MKev's Modpatch Installer v1.3b](../../Modpatch-Installer/README.md) (unchanged since v1.3). 1.1.2 changes only version and docs; the fixes and the self-healing are the same as in 1.1.1.
 
 Author: **MKev**.
 
@@ -95,7 +95,7 @@ The three upstream problems, and a short list of other boot-log notes this mod d
 
 ## Install
 
-- **Windows (player or server):** use [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) v1.3 (option 1 or 2), or extract `Server-BootPatch-v1.1.2.zip` into `%USERPROFILE%\Zomboid\mods\`.
+- **Windows (player or server):** use [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) v1.3b (option 1 or 2), or extract `Server-BootPatch-v1.1.2.zip` into `%USERPROFILE%\Zomboid\mods\`.
 - **Linux dedicated server:** extract `Server-BootPatch-v1.1.2.zip` into the server's `Zomboid/mods/` folder (the folder that contains `Server/` and `Saves/`, giving `Zomboid/mods/mkevserverbootpatch/`) and keep `mkevserverbootpatch` last in `Mods=`. That's all - no start script or other server file has to be changed. `tools/check_upstream.sh` is only an optional tool for admins who want to check the fixes by hand. Case problems of *other* mods on Linux (files not found because of upper/lower case) are not part of this mod; for them the installer zip brings the optional [MKev's Linux-Guard](../Linux-Guard/README.md).
 - Check after the next start: the log shows `mod "mkevserverbootpatch" overrides media/scripts/recipes/recipes_fletching.txt` (and the two other files), and the F1–F3 messages above are gone.
 
