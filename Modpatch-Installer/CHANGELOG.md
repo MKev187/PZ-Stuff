@@ -1,12 +1,29 @@
 # Changelog: MKev's Modpatch Installer
 
-Current package in this folder: `Modpatch-Installer-v1.3b.zip`.
-Older packages (`Modpatch-Installer-v1.3.zip`, `Modpatch-Installer-v1.2.zip`, `Modpatch-Installer-v1.1b.zip`, `Modpatch-Installer-v1.0.zip`, `MKev-ModPatcher-v0.3.0.zip`) are in [Patches/Patch-Installer](../Patches/Patch-Installer/README.md).
+Current package in this folder: `Modpatch-Installer-v1.31.zip`.
+Older packages (`Modpatch-Installer-v1.3b.zip`, `Modpatch-Installer-v1.3.zip`, `Modpatch-Installer-v1.2.zip`, `Modpatch-Installer-v1.1b.zip`, `Modpatch-Installer-v1.0.zip`, `MKev-ModPatcher-v0.3.0.zip`) are in [Patches/Patch-Installer](../Patches/Patch-Installer/README.md).
 `Modpatch-Installer-v1.1.zip` and `Modpatcher-v1.1_vvr.zip` are not stored in this repository. The hashes in the v1.1 section below are the ones published with those versions. The standalone current patcher is [`Modpatcher-v1.2.zip`](../Patches/ModPatcher/Modpatcher-v1.2.zip), the standalone BootPatch is [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip), Linux-Guard is in [Patches/Linux-Guard](../Patches/Linux-Guard/README.md). The older standalone zips `Modpatcher-v1.1b.zip` and `Server-BootPatch-v1.1.1.zip` are no longer stored (they are inside the archived installer v1.2).
+
+## v1.31 - 2026-11-12
+
+**Download:** [`Modpatch-Installer-v1.31.zip`](Modpatch-Installer-v1.31.zip)  
+**SHA256:** `affec8bc69be26c50e394dd7994af6862c5c773816e994bc9e7fe15ccef9979e`  
+Bundled mods unchanged from v1.3 / v1.3b (byte-identical): `mkev_modpatcher` 1.2, `mkevserverbootpatch` 1.1.2, Linux-Guard 1.0.0.
+
+### Changed
+- `MKevServer_setup/MKevServer_SandboxVars.lua`: `FirearmUseDamageChance = 1` (was `2`). A failed hit-chance roll is now a true miss: the zombie is not hit and takes no damage. Previously (`2`) the shot still counted as a hit and played the hit reaction, but the damage was discarded. Hit chance, damage, range and attachments are unchanged. This option applies to zombies only, not to players. All other sandbox values are the same as in v1.3b.
+
+### Upgrade from v1.3b
+- Server admins: set `FirearmUseDamageChance = 1` in `Zomboid/Server/<servername>_SandboxVars.lua`, or replace that file with `MKevServer_setup/MKevServer_SandboxVars.lua` (back up your own file first), and restart the server. Or run the installer, option 1.
+- Players: nothing to do. The mods did not change, so v1.3, v1.3b and v1.31 players can join the same server.
+
+### Upgrade from v1.3 or older
+- Server admins: the sandbox also includes the v1.3b fixes. Replace `Zomboid/Server/<servername>_SandboxVars.lua` with `MKevServer_setup/MKevServer_SandboxVars.lua` (back up your own file first) and restart the server, or run option 1. Players on v1.3 or v1.3b need nothing new.
+- From v1.2 or older: run the v1.31 installer, or replace `mods\mkev_modpatcher` and `mods\mkevserverbootpatch`. Do this on the server **and** on every client (ModPatcher 1.2 changes the Lua checksum).
 
 ## v1.3b - 2026-11-11 (hotfix)
 
-**Download:** [`Modpatch-Installer-v1.3b.zip`](Modpatch-Installer-v1.3b.zip)  
+**Download:** [`Modpatch-Installer-v1.3b.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.3b.zip) (archive)  
 **SHA256:** `f639288657025525ebfdcf702a416292e0e0c8e9cb33525d7c59c4bdc5f65f7c`  
 Bundled mods unchanged from v1.3 (byte-identical): `mkev_modpatcher` 1.2, `mkevserverbootpatch` 1.1.2, Linux-Guard 1.0.0.
 
@@ -186,9 +203,26 @@ Installer for the collection release (base 0.3.0multi, EN/DE). Build 42.22.2, co
 
 ## Deutsch
 
+## v1.31 - 12.11.2026
+
+**Download:** [`Modpatch-Installer-v1.31.zip`](Modpatch-Installer-v1.31.zip)  
+**SHA256:** `affec8bc69be26c50e394dd7994af6862c5c773816e994bc9e7fe15ccef9979e`  
+Mitgelieferte Mods unverändert zu v1.3 / v1.3b (bytegleich): `mkev_modpatcher` 1.2, `mkevserverbootpatch` 1.1.2, Linux-Guard 1.0.0.
+
+### Geändert
+- `MKevServer_setup/MKevServer_SandboxVars.lua`: `FirearmUseDamageChance = 1` (war `2`). Ein misslungener Trefferchance-Wurf ist jetzt ein echter Fehlschuss: Der Zombie gilt als nicht getroffen und bekommt keinen Schaden. Bisher (`2`) zählte der Schuss trotzdem als Treffer und spielte die Treffer-Reaktion, der Schaden wurde aber verworfen. Trefferchance, Schaden, Reichweite und Aufsätze bleiben unverändert. Die Option gilt nur für Zombies, nicht für Spieler. Alle anderen Sandbox-Werte sind wie in v1.3b.
+
+### Update von v1.3b
+- Server-Admins: In `Zomboid/Server/<Servername>_SandboxVars.lua` `FirearmUseDamageChance = 1` setzen, oder die Datei durch `MKevServer_setup/MKevServer_SandboxVars.lua` ersetzen (vorher die eigene Datei sichern) und den Server neu starten. Oder den Installer mit Option 1 ausführen.
+- Spieler: nichts zu tun. Die Mods sind gleich geblieben, Spieler mit v1.3, v1.3b und v1.31 können auf denselben Server.
+
+### Update von v1.3 oder älter
+- Server-Admins: Die Sandbox enthält auch die Korrekturen aus v1.3b. `Zomboid/Server/<Servername>_SandboxVars.lua` durch `MKevServer_setup/MKevServer_SandboxVars.lua` ersetzen (vorher die eigene Datei sichern) und den Server neu starten, oder Option 1. Spieler mit v1.3 oder v1.3b brauchen nichts Neues.
+- Von v1.2 oder älter: Den Installer v1.31 ausführen oder `mods\mkev_modpatcher` und `mods\mkevserverbootpatch` ersetzen. Das gilt für den Server **und** alle Clients (ModPatcher 1.2 ändert die Lua-Checksumme).
+
 ## v1.3b - 11.11.2026 (Hotfix)
 
-**Download:** [`Modpatch-Installer-v1.3b.zip`](Modpatch-Installer-v1.3b.zip)  
+**Download:** [`Modpatch-Installer-v1.3b.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.3b.zip) (Archiv)  
 **SHA256:** `f639288657025525ebfdcf702a416292e0e0c8e9cb33525d7c59c4bdc5f65f7c`  
 Mitgelieferte Mods unverändert zu v1.3 (bytegleich): `mkev_modpatcher` 1.2, `mkevserverbootpatch` 1.1.2, Linux-Guard 1.0.0.
 

@@ -1,8 +1,8 @@
 # MKev's Modpatch Installer
 
 This folder is the archive of previous installer packages, not the current release.
-Download the current build (v1.3b) from [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) ([`/Modpatch-Installer/Modpatch-Installer-v1.3b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.3b.zip)).
-The description below is the one of the archived v1.1b package. What changed in v1.2 (Server BootPatch 1.1.1: fixes bundled, rewritten by the installer when a mod updates) in v1.3 (ModPatcher 1.2, BootPatch 1.1.2, new optional Linux-Guard for Linux servers) and in v1.3b (hotfix: fixed missing parameters in server files): [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md).
+Download the current build (v1.31) from [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) ([`/Modpatch-Installer/Modpatch-Installer-v1.31.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.31.zip)).
+The description below is the one of the archived v1.1b package. What changed in v1.2 (Server BootPatch 1.1.1: fixes bundled, rewritten by the installer when a mod updates) in v1.3 (ModPatcher 1.2, BootPatch 1.1.2, new optional Linux-Guard for Linux servers) in v1.3b (hotfix: fixed missing parameters in server files) and in v1.31 (`FirearmUseDamageChance = 1` in the server sandbox): [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md).
 
 One download that sets up a dedicated server and the clients for a 376-mod Project Zomboid Build 42 multiplayer list.
 Every fix is matched to a specific error from a real server log, and every one is a runtime patch or a file built into the patch mods' own folders.
@@ -18,7 +18,7 @@ The installer is in English and German. `ModPatchInstaller.bat` asks which langu
 
 - **Game:** Project Zomboid Build **42.22.2**, multiplayer (dedicated server and clients)
 - **Collection:** [MKev Zomboid Modlist B42.22, Workshop 3827894199](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199)
-- **Current release:** [`Modpatch-Installer-v1.3b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.3b.zip) in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md). This folder keeps v1.3, v1.2, v1.1b and the older packages below.
+- **Current release:** [`Modpatch-Installer-v1.31.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.31.zip) in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md). This folder keeps v1.3b, v1.3, v1.2, v1.1b and the older packages below.
 
 Deeper docs, kept next to this folder:
 
@@ -35,12 +35,13 @@ Current release, in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md)
 
 | File | Version | SHA256 |
 |---|---|---|
-| **[`Modpatch-Installer-v1.3b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.3b.zip)** | Installer 1.3b + ModPatcher 1.2 + BootPatch 1.1.2 + Linux-Guard 1.0.0 (hotfix: server SandboxVars) | `f639288657025525ebfdcf702a416292e0e0c8e9cb33525d7c59c4bdc5f65f7c` |
+| **[`Modpatch-Installer-v1.31.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.31.zip)** | Installer 1.31 + ModPatcher 1.2 + BootPatch 1.1.2 + Linux-Guard 1.0.0 (`FirearmUseDamageChance = 1`) | `affec8bc69be26c50e394dd7994af6862c5c773816e994bc9e7fe15ccef9979e` |
 
 Files still in this folder:
 
 | File | Version | SHA256 |
 |---|---|---|
+| `Modpatch-Installer-v1.3b.zip` | Installer 1.3b (hotfix of v1.3: fixed missing parameters in server files; same mods) | `f639288657025525ebfdcf702a416292e0e0c8e9cb33525d7c59c4bdc5f65f7c` |
 | `Modpatch-Installer-v1.3.zip` | Installer 1.3 (ModPatcher 1.2 + BootPatch 1.1.2 + Linux-Guard 1.0.0; SandboxVars without Wolf's Extraction Quest options) | `1c41d1d5f30f972bf5235f7ee3ff41e64fafec03d9adc68e2c83a20d1aa1eff0` |
 | `Modpatch-Installer-v1.2.zip` | Installer 1.2 (ModPatcher 1.1b + BootPatch 1.1.1) | `c9c6b3d48882b2136dfce0d750f1b1cb2d390e71969e79d374967dde6613a727` |
 | `Modpatch-Installer-v1.1b.zip` | Installer 1.1b (ModPatcher 1.1b + BootPatch 1.1.0) | `0ba6bc0049c38880b164d110a3918a5e699fe88e9e455a33341c533b60f5264f` |
@@ -110,7 +111,7 @@ Two scripts with the same logic: `ModPatchInstaller_en.ps1` and `ModPatchInstall
 - **No secrets shipped:** the package contains no `servertest.ini`, only the three list values (`Mods=`, `WorkshopItems=`, `Map=`) as separate text files.
 - **Steam libraries:** finds Workshop folders through `libraryfolders.vdf`. `PZ_WORKSHOP` overrides this, pointing at `...\steamapps\workshop\content\108600`.
 
-`VERSION.txt` in the v1.1b zip records installer 1.1b, ModPatcher 1.1b, BootPatch 1.1.0, and the server kit below. The v1.2 zip records installer 1.2, ModPatcher 1.1b, BootPatch 1.1.1 and the same server kit; the v1.3 zip installer 1.3, ModPatcher 1.2, BootPatch 1.1.2, Linux-Guard 1.0.0 and the same server kit; the v1.3b zip installer 1.3b with the same mods and the fixed SandboxVars.
+`VERSION.txt` in the v1.1b zip records installer 1.1b, ModPatcher 1.1b, BootPatch 1.1.0, and the server kit below. The v1.2 zip records installer 1.2, ModPatcher 1.1b, BootPatch 1.1.1 and the same server kit; the v1.3 zip installer 1.3, ModPatcher 1.2, BootPatch 1.1.2, Linux-Guard 1.0.0 and the same server kit; the v1.3b zip installer 1.3b with the same mods and the fixed SandboxVars; the v1.31 zip installer 1.31 with the same mods and `FirearmUseDamageChance = 1`.
 
 ---
 
@@ -230,10 +231,10 @@ Yes. The server and every player need the same `mkev_modpatcher` and `mkevserver
 Yes. Option 1 replaces only `Mods=`, `WorkshopItems=` and `Map=` in `servertest.ini`. Passwords, ports, server name, and all other lines stay byte-for-byte. Everything is backed up first, and option 5 shows the changes without writing anything. The package itself contains no credentials.
 
 **How do I verify my download?**
-Compare the SHA256 of the current zip (v1.3b) with [`SHA256SUMS.txt`](../../Modpatch-Installer/SHA256SUMS.txt) in `/Modpatch-Installer/`. In PowerShell: `Get-FileHash .\Modpatch-Installer-v1.3b.zip`. Hashes for the copies kept in this folder are in [`SHA256SUMS.txt`](SHA256SUMS.txt).
+Compare the SHA256 of the current zip (v1.31) with [`SHA256SUMS.txt`](../../Modpatch-Installer/SHA256SUMS.txt) in `/Modpatch-Installer/`. In PowerShell: `Get-FileHash .\Modpatch-Installer-v1.31.zip`. Hashes for the copies kept in this folder are in [`SHA256SUMS.txt`](SHA256SUMS.txt).
 
 **I updated from v1.1 or v1.0. What do I do?**
-Run the current v1.3b installer again, or replace `Zomboid\mods\mkev_modpatcher` and `Zomboid\mods\mkevserverbootpatch` with the folders from the zip. Do it on the server and on every client.
+Run the current v1.31 installer again, or replace `Zomboid\mods\mkev_modpatcher` and `Zomboid\mods\mkevserverbootpatch` with the folders from the zip. Do it on the server and on every client.
 
 **Where do I report bugs?**
 Open an issue in this repository (MKev187/PZ-Stuff). Please include your `console.txt` or the `Zomboid\Logs\*DebugLog*.txt` lines around the error, plus the installer's `installer_log.txt`.

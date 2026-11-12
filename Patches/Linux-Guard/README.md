@@ -8,7 +8,7 @@ Linux-Guard is an **optional** start script for **Linux** dedicated servers of P
 Linux does not find because of upper and lower case. Players and Windows servers do not need it.
 
 **Files:** `start-server.sh` (the script), `Guide.txt` (which of the 3 setups fits your host), `README.md` (this file).
-It comes with [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) (folder `Linux-Guard/` in [`Modpatch-Installer-v1.3b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.3b.zip)).
+It comes with [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) (folder `Linux-Guard/` in [`Modpatch-Installer-v1.31.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.31.zip)).
 **Download:** [`start-server.sh`](start-server.sh) and [`Guide.txt`](Guide.txt) in this folder (SHA256 in [`SHA256SUMS.txt`](SHA256SUMS.txt)). History: [`CHANGELOG.md`](CHANGELOG.md).
 
 ## The problem
@@ -96,7 +96,7 @@ Linux-Guard ist ein **optionales** Startskript für **Linux**-Dedicated-Server v
 Linux wegen Groß- und Kleinschreibung nicht findet. Spieler und Windows-Server brauchen es nicht.
 
 **Dateien:** `start-server.sh` (das Skript), `Guide.txt` (welcher der 3 Fälle zu deinem Host passt, Englisch), `README.md` (diese Datei).
-Es liegt [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) bei (Ordner `Linux-Guard/` in [`Modpatch-Installer-v1.3b.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.3b.zip)).
+Es liegt [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) bei (Ordner `Linux-Guard/` in [`Modpatch-Installer-v1.31.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.31.zip)).
 **Download:** [`start-server.sh`](start-server.sh) und [`Guide.txt`](Guide.txt) in diesem Ordner (SHA256 in [`SHA256SUMS.txt`](SHA256SUMS.txt)). Verlauf: [`CHANGELOG.md`](CHANGELOG.md).
 
 ### Das Problem
