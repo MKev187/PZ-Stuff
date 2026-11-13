@@ -10,8 +10,8 @@ Author: **MKev**.
 
 | Package | Version | What it is for |
 |---|---|---|
-| [MKev's Modpatch Installer](../Modpatch-Installer/README.md) | **1.31** | The download most people should use. One package for the dedicated server and for every player. |
-| [MKev's Modpatcher](ModPatcher/README.md) | **1.2** | The core runtime patch. It is already inside the installer. A standalone zip is in `ModPatcher/` if you only need the patcher. |
+| [MKev's Modpatch Installer](../Modpatch-Installer/README.md) | **1.33** | The download most people should use. One package for the dedicated server and for every player. |
+| [MKev's Modpatcher](ModPatcher/README.md) | **1.3.2** | The core runtime patch. It is already inside the installer. A standalone zip is in `ModPatcher/` if you only need the patcher. |
 | [MKev's Server BootPatch](Server-BootPatch/README.md) | **1.1.2** | Boot-log script fixes, bundled in the mod. Inside the installer, and as a standalone zip in `Server-BootPatch/` (for example for a Linux server). |
 | [MKev's Linux-Guard](Linux-Guard/README.md) | **1.0.0** | Optional `start-server.sh` for Linux dedicated servers: lowercase links for mod files Linux does not find because of upper/lower case. Inside the installer zip (folder `Linux-Guard/`) and in `Linux-Guard/`. |
 
@@ -19,13 +19,13 @@ The server and every player need the same ModPatcher version, and the same Serve
 
 ## The download most people should use
 
-MKev's Modpatch Installer is the all-in-one package. It contains MKev's Modpatcher 1.2, the server kit (mod list, load order, map, sandbox, and the in-game preset `MKevServer`), MKev's Server BootPatch 1.1.2, and the optional MKev's Linux-Guard 1.0.0 for Linux servers.
+MKev's Modpatch Installer is the all-in-one package. It contains MKev's Modpatcher 1.3.2, the server kit (mod list, load order, map, sandbox, and the in-game preset `MKevServer`), MKev's Server BootPatch 1.1.2, and the optional MKev's Linux-Guard 1.0.0 for Linux servers.
 
 The current zip is at the repository root, in [Modpatch-Installer](../Modpatch-Installer/README.md):
 
-- [Modpatch-Installer-v1.31.zip](../Modpatch-Installer/Modpatch-Installer-v1.31.zip) (`FirearmUseDamageChance = 1` in the server sandbox; mods unchanged since v1.3)
+- [Modpatch-Installer-v1.33.zip](../Modpatch-Installer/Modpatch-Installer-v1.33.zip) (ModPatcher 1.3.2: rewritten connect-notice warning and reload-speed guard; optional client RAM; sandbox unchanged from v1.32)
 - Install notes: [MKev's Modpatch Installer](../Modpatch-Installer/README.md)
-- Release: [Modpatch-Installer-v1.31](https://github.com/MKev187/PZ-Stuff/releases/tag/Modpatch-Installer-v1.31)
+- Release: [Modpatch-Installer-v1.33](https://github.com/MKev187/PZ-Stuff/releases/tag/Modpatch-Installer-v1.33)
 
 On Windows, close the game and your own PZ server, extract the whole zip, and start `ModPatchInstaller.bat`. The installer refuses to run while either one is running. It then asks which language to use: English or German.
 
@@ -35,7 +35,7 @@ On Windows, close the game and your own PZ server, extract the whole zip, and st
 
 A dry run shows what Install & set up would change and writes nothing.
 
-The package contains no passwords and no `servertest.ini`. The server kit is the MKev server list of **376** mods and **325** Workshop items, map `Muldraugh, KY`, for Build 42.22.2. `WorkshopItems` includes I Know It! (Workshop [3836594593](https://steamcommunity.com/sharedfiles/filedetails/?id=3836594593)) in the load order this kit writes. I Know It! is part of that list and is not inside the zip. It comes from the Workshop collection, like every other Workshop mod. Both patch mods are last in `Mods=`.
+The package contains no passwords and no `servertest.ini`. The server kit is the MKev server list of **375** mods and **324** Workshop items, map `Muldraugh, KY`, for Build 42.22.2. `WorkshopItems` includes I Know It! (Workshop [3836594593](https://steamcommunity.com/sharedfiles/filedetails/?id=3836594593)) in the load order this kit writes. I Know It! is part of that list and is not inside the zip. It comes from the Workshop collection, like every other Workshop mod. Both patch mods are last in `Mods=`.
 
 Server BootPatch 1.1.2 is installed as it is: its three script fixes are part of the mod, no build step is needed. If one of those three mods was updated, the installer rewrites the fix from the new original (Workshop files are only read), checks it, and removes our fix when the author has fixed the bug. A fix that fails its check is never written; the install still runs. On a Linux dedicated server, where the Windows installer does not run, copy the `mkev_modpatcher` and `mkevserverbootpatch` folders from the zip into the server's `Zomboid/mods/` folder. Optional on Linux: [MKev's Linux-Guard](Linux-Guard/README.md) from the zip folder `Linux-Guard/`.
 
@@ -45,9 +45,9 @@ Four folders are here. The current installer zip is the one linked above, at the
 
 ### MKev's Modpatcher
 
-[ModPatcher/](ModPatcher/README.md) is the core. Mod id `mkev_modpatcher`, version **1.2**. It is a local mod: it loads last, and it fixes other mods while the game runs. It does not edit their files. Anything it adds lives in its own folder.
+[ModPatcher/](ModPatcher/README.md) is the core. Mod id `mkev_modpatcher`, version **1.3.2**. It is a local mod: it loads last, and it fixes other mods while the game runs. It does not edit their files. Anything it adds lives in its own folder.
 
-The standalone zip is [Modpatcher-v1.2.zip](ModPatcher/Modpatcher-v1.2.zip). Version 1.2 is 1.1b with `versionMin=42.21`; nothing else changed. For a new dedicated server, use the installer. That run installs Server BootPatch too and can set the mod list, map, sandbox, and preset.
+The standalone zip is [Modpatcher-v1.3.2.zip](ModPatcher/Modpatcher-v1.3.2.zip). Version 1.3.2 rewrites the connect-notice warning and includes the reload-speed nil-strap guard; the server sandbox is unchanged from installer v1.32. For a new dedicated server, use the installer. That run installs Server BootPatch too and can set the mod list, map, sandbox, and preset.
 
 Two fixes are the ones people usually ask about. The full module list is on the [ModPatcher page](ModPatcher/README.md).
 
@@ -55,7 +55,7 @@ Two fixes are the ones people usually ask about. The full module list is on the 
 
 **The Tweed jacket tooltip fix, added in 1.1b.** The Tweed jacket ("Tweedjacke", EN "Suit Jacket - Tweed") is not a vanilla item. It comes from Spongie's Clothing. The closed jacket uses BodyLocation `base:jacket_suit`, and the open jacket uses `base:JACKET_OPEN`. Neither id exists in Build 42.22, so every mouse hover threw a `NullPointerException` in the item tooltip. The fix sets `base:jacketsuit` on the jacket, and `SpnOpenCloth:JACKET_OPEN` on the open jacket when Spongie's Open Jackets [BASE] is active. It runs only while Spongie's Clothing is active and the location is still missing. Spongie's files are not modified.
 
-After you install, the log should show `[MKev-ModPatcher] version 1.2 loaded`.
+After you install, the log should show `[MKev-ModPatcher] version 1.3 loaded`.
 
 ### Earlier installer packages
 
@@ -72,7 +72,7 @@ Still in that folder:
 
 [Server-BootPatch/](Server-BootPatch/README.md) is a small second mod, id `mkevserverbootpatch`, version **1.1.2**. Load it at the very end of `Mods=`, after `mkev_modpatcher`. It fixes script bugs that show up in the dedicated-server boot log.
 
-Version 1.1.2 comes with installer v1.3 / v1.3b / v1.31 and as the standalone zip [Server-BootPatch-v1.1.2.zip](Server-BootPatch/Server-BootPatch-v1.1.2.zip) (1.1.2 changes only version and docs; the fixes are the same as in 1.1.1). The three script fixes are fixed override files inside this mod (until 1.1.0 the installer built them at install time, which never happened on Linux servers). Your Workshop copies stay as they were.
+Version 1.1.2 comes with installer v1.3 / v1.3b / v1.31 / v1.32 and as the standalone zip [Server-BootPatch-v1.1.2.zip](Server-BootPatch/Server-BootPatch-v1.1.2.zip) (1.1.2 changes only version and docs; the fixes are the same as in 1.1.1). The three script fixes are fixed override files inside this mod (until 1.1.0 the installer built them at install time, which never happened on Linux servers). Your Workshop copies stay as they were.
 
 - **Archery Nexus [Fixed].** The recipe "Assemble A Primitive Hunting Bow" asks for the perk `Carpentry:3`. That id is not a Build 42 perk. The fixed file uses `Woodwork:3`.
 - **Mad Crafter.** Two recipes use `Electrical:` where the perk id is `Electricity:` (six places). Requirement, autolearn, and XP work again.

@@ -1,12 +1,46 @@
 # Changelog: MKev's Modpatch Installer
 
-Current package in this folder: `Modpatch-Installer-v1.31.zip`.
-Older packages (`Modpatch-Installer-v1.3b.zip`, `Modpatch-Installer-v1.3.zip`, `Modpatch-Installer-v1.2.zip`, `Modpatch-Installer-v1.1b.zip`, `Modpatch-Installer-v1.0.zip`, `MKev-ModPatcher-v0.3.0.zip`) are in [Patches/Patch-Installer](../Patches/Patch-Installer/README.md).
-`Modpatch-Installer-v1.1.zip` and `Modpatcher-v1.1_vvr.zip` are not stored in this repository. The hashes in the v1.1 section below are the ones published with those versions. The standalone current patcher is [`Modpatcher-v1.2.zip`](../Patches/ModPatcher/Modpatcher-v1.2.zip), the standalone BootPatch is [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip), Linux-Guard is in [Patches/Linux-Guard](../Patches/Linux-Guard/README.md). The older standalone zips `Modpatcher-v1.1b.zip` and `Server-BootPatch-v1.1.1.zip` are no longer stored (they are inside the archived installer v1.2).
+Current package in this folder: `Modpatch-Installer-v1.33.zip`.
+Older packages (`Modpatch-Installer-v1.32.zip`, `Modpatch-Installer-v1.31.zip`, `Modpatch-Installer-v1.3b.zip`, `Modpatch-Installer-v1.3.zip`, `Modpatch-Installer-v1.2.zip`, `Modpatch-Installer-v1.1b.zip`, `Modpatch-Installer-v1.0.zip`, `MKev-ModPatcher-v0.3.0.zip`) are in [Patches/Patch-Installer](../Patches/Patch-Installer/README.md).
+`Modpatch-Installer-v1.1.zip` and `Modpatcher-v1.1_vvr.zip` are not stored in this repository. The hashes in the v1.1 section below are the ones published with those versions. The standalone current patcher is [`Modpatcher-v1.3.2.zip`](../Patches/ModPatcher/Modpatcher-v1.3.2.zip), the standalone BootPatch is [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip), Linux-Guard is in [Patches/Linux-Guard](../Patches/Linux-Guard/README.md). The older standalone zips `Modpatcher-v1.1b.zip` and `Server-BootPatch-v1.1.1.zip` are no longer stored (they are inside the archived installer v1.2).
+
+## v1.33 - 2026-11-13
+
+**Download:** [`Modpatch-Installer-v1.33.zip`](Modpatch-Installer-v1.33.zip)  
+**SHA256:** `05c4e6652879dee2b52d5a191b61b96c3278b00f6d82f4037a7636e5eea33612`  
+Bundled mods: `mkev_modpatcher` **1.3.2** (rewritten connect-notice warning, blinking all-caps title, plus the 1.3.1 reload-speed nil-strap guard). `mkevserverbootpatch` 1.1.2 and Linux-Guard 1.0.0 are unchanged. The server sandbox is unchanged from v1.32 / v1.31 (`FirearmUseDamageChance = 1`).
+
+### Changed
+- **ModPatcher 1.3.2:** the join/loading notice is a warning: all-caps blinking title `HINWEIS` / `CAUTION` (1 Hz, gold, alpha on/off via `getTimestampMs` in prerender), new DE/EN wording, and an inline red `ACHTUNG!` / `ATTENTION!` on the timeout paragraph. The red quoted game error (`UI_GameLoad_UnexpectedError1`) and the restart advice are unchanged. The window still fits the full text, including on 1280x720. Server and every client need the same version (Lua checksum).
+- **ModPatcher 1.3.1 reload-speed guard:** the reload crash `getClothingItemName of non-table: null` in vanilla `ISReloadWeaponAction.setReloadSpeed` (no ammo strap) is included in this package.
+- **Optional client RAM (question 3):** after install option 1, 2 or 5 the installer can set `-Xms`/`-Xmx` in the Windows game file `ProjectZomboid64.json` (Steam libraries are found the same way as Workshop folders). Default is no change (choice 7). Choice 8 returns to the install menu. Recommended: 12 GB + 16 GB headroom (explicitly recommended); 8 GB + 12 GB headroom (minimum recommendation). All other combinations are labelled "at your own risk, optimal performance is not guaranteed". Existing vmArgs are kept; only `-Xms`/`-Xmx` are replaced or added, without duplicates. A timestamped backup is written; menu option 3 can restore the JSON too. A warning is shown if `-Xmx` is greater than installed RAM minus 4 GB. Steam game updates can reset the file; the installer can be run again. This never changes the dedicated server.
+- Question 1 remains English / Deutsch only. Traditional Chinese (zh-TW) is not in this installer and was not added.
+- **Server list (2026-11-13 refresh):** `Tuna_GunRacks` (3D Gun Racks, WS 3784677588) and `Tuna_EquipmentRacks` (3D Equipment Lockers, WS 3793403177) are replaced by `SuporteFuzis` (Weapon Racks, WS 3835057498) at the same slot (after `NWCornerFix` / WS 3795492094). The packaged list is now 375 mods / 324 WorkshopItems. I Know It! (`iknowit`, WS 3836594593) stays in `Mods=` and `WorkshopItems=`. `mkev_modpatcher` stays 1.3.2 (no code change for this swap).
+
+### Upgrade from v1.32
+- Server and every client: run this v1.33 installer, or replace `mods\mkev_modpatcher` with version 1.3.2 (checksum change). The RAM option is optional and off by default.
+- If you already installed v1.33 before the 2026-11-13 list refresh: re-run option 1 to update `Mods=` and `WorkshopItems=` (or replace those lines from `MKevServer_setup`). ModPatcher 1.3.2 itself is unchanged.
+
+
+## v1.32 - 2026-11-12
+
+**Download:** [`Modpatch-Installer-v1.32.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.32.zip) (archive)  
+**SHA256:** `a3c52537ccac7f3e624e7b085f6fba3b96475c600006fcd7989eafb8b08d6221`  
+Bundled mods: `mkev_modpatcher` **1.3** (connect-notice timeout hint). `mkevserverbootpatch` 1.1.2 and Linux-Guard 1.0.0 are unchanged (byte-identical to v1.3 / v1.3b / v1.31). The server sandbox is unchanged from v1.31 (`FirearmUseDamageChance = 1`).
+
+### Changed
+- `mkev_modpatcher` 1.3: the join/loading notice now also says that a rare connection timeout on the first join can show the game's error message, quoted in red. The wording is taken verbatim from the game translation files (key `UI_GameLoad_UnexpectedError1`, checked in the B42 client on 12.11.2026): DE `Leider ist ein unerwarteter Fehler aufgetreten.` / EN `Sorry, an unexpected error occurred.` The notice then tells the player to restart the client and connect again. The previous loading-notice texts are unchanged. The 30-second client timeout itself is hard-coded in Java (`IsoWorld.init`) and cannot be changed from Lua.
+
+### Upgrade from v1.31
+- Server admins and players: run the v1.32 installer, or replace `mods\mkev_modpatcher` with version 1.3. Do this on the server **and** on every client (ModPatcher 1.3 changes the Lua checksum). The server sandbox does not change.
+
+### Upgrade from v1.3b or older
+- From v1.3b: also set `FirearmUseDamageChance = 1` in the server sandbox (already included in this package), then install ModPatcher 1.3 as above.
+- From v1.3 or older: the sandbox also includes the v1.3b fixes. Replace `Zomboid/Server/<servername>_SandboxVars.lua` with `MKevServer_setup/MKevServer_SandboxVars.lua` (back up your own file first) or run option 1, and install ModPatcher 1.3 on the server and every client.
 
 ## v1.31 - 2026-11-12
 
-**Download:** [`Modpatch-Installer-v1.31.zip`](Modpatch-Installer-v1.31.zip)  
+**Download:** [`Modpatch-Installer-v1.31.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.31.zip) (archive)  
 **SHA256:** `affec8bc69be26c50e394dd7994af6862c5c773816e994bc9e7fe15ccef9979e`  
 Bundled mods unchanged from v1.3 / v1.3b (byte-identical): `mkev_modpatcher` 1.2, `mkevserverbootpatch` 1.1.2, Linux-Guard 1.0.0.
 
@@ -47,7 +81,7 @@ Bundled mods unchanged from v1.3 (byte-identical): `mkev_modpatcher` 1.2, `mkevs
 
 **Download:** [`Modpatch-Installer-v1.3.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.3.zip) (archive)  
 **SHA256:** `1c41d1d5f30f972bf5235f7ee3ff41e64fafec03d9adc68e2c83a20d1aa1eff0`  
-Bundled ModPatcher: `mkev_modpatcher` **1.2** (also as [`Modpatcher-v1.2.zip`](../Patches/ModPatcher/Modpatcher-v1.2.zip), SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`).  
+Bundled ModPatcher: `mkev_modpatcher` **1.2** (also as `Modpatcher-v1.2.zip`, SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`).  
 Bundled BootPatch: `mkevserverbootpatch` **1.1.2** (also as [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip), SHA256 `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`).  
 New: **[Linux-Guard](../Patches/Linux-Guard/README.md) 1.0.0** (folder `Linux-Guard/`, optional, Linux dedicated servers only).
 
@@ -203,9 +237,43 @@ Installer for the collection release (base 0.3.0multi, EN/DE). Build 42.22.2, co
 
 ## Deutsch
 
+## v1.33 - 13.11.2026
+
+**Download:** [`Modpatch-Installer-v1.33.zip`](Modpatch-Installer-v1.33.zip)  
+**SHA256:** `05c4e6652879dee2b52d5a191b61b96c3278b00f6d82f4037a7636e5eea33612`  
+Mitgelieferte Mods: `mkev_modpatcher` **1.3.2** (neuer Warntext und blinkender Titel der Connect-Notice, plus Reload-Guard 1.3.1). `mkevserverbootpatch` 1.1.2 und Linux-Guard 1.0.0 sind unveraendert. Die Server-Sandbox ist unveraendert zu v1.32 / v1.31 (`FirearmUseDamageChance = 1`).
+
+### Geaendert
+- **ModPatcher 1.3.2:** Der Hinweis beim Verbinden ist jetzt ein Warnhinweis: Titel `HINWEIS` / `CAUTION` in Grossbuchstaben, blinkt einmal pro Sekunde (gold, nur Alpha an/aus ueber `getTimestampMs` im prerender). Neue DE/EN-Texte. Der Timeout-Absatz beginnt in Rot mit `ACHTUNG!` / `ATTENTION!`, der Rest des Absatzes in normaler Farbe. Das rote Zitat der Spielfehlermeldung (`UI_GameLoad_UnexpectedError1`) und der Neustart-Hinweis bleiben. Das Fenster fasst den ganzen Text, auch auf 1280x720. Server und alle Clients brauchen dieselbe Version (Lua-Checksumme).
+- **ModPatcher 1.3.1 Reload-Guard:** Der Absturz `getClothingItemName of non-table: null` in Vanilla `ISReloadWeaponAction.setReloadSpeed` (kein Munitionsband) ist in diesem Paket enthalten.
+- **Optionale Client-RAM-Frage (Frage 3):** Nach Installationsoption 1, 2 oder 5 kann der Installer `-Xms`/`-Xmx` in der Windows-Spieldatei `ProjectZomboid64.json` setzen (Steam-Bibliotheken wie bei den Workshop-Ordnern). Standard ist keine Aenderung (Wahl 7). Wahl 8 kehrt ins Installationsmenue zurueck. Empfehlung: 12 GB + 16 GB Reserve (ausdruecklich empfohlen); 8 GB + 12 GB Reserve (Mindestempfehlung). Alle anderen Kombinationen sind mit "auf eigenes Risiko, optimale Leistung nicht garantiert" gekennzeichnet. Vorhandene vmArgs bleiben; nur `-Xms`/`-Xmx` werden ersetzt oder ergaenzt, ohne Duplikate. Es entsteht ein zeitgestempeltes Backup; Menuepunkt 3 kann die JSON ebenfalls wiederherstellen. Eine Warnung erscheint, wenn `-Xmx` groesser ist als der eingebaute RAM minus 4 GB. Steam-Spielupdates koennen die Datei zuruecksetzen; der Installer kann erneut ausgefuehrt werden. Der Dedicated Server wird nie geaendert.
+- Frage 1 bleibt nur English / Deutsch. Traditionelles Chinesisch (zh-TW) ist in diesem Installer nicht enthalten und wurde nicht ergaenzt.
+- **Serverliste (Stand 13.11.2026):** `Tuna_GunRacks` (3D Gun Racks, WS 3784677588) und `Tuna_EquipmentRacks` (3D Equipment Lockers, WS 3793403177) werden durch `SuporteFuzis` (Weapon Racks, WS 3835057498) an derselben Stelle ersetzt (nach `NWCornerFix` / WS 3795492094). Die mitgelieferte Liste hat jetzt 375 Mods / 324 WorkshopItems. I Know It! (`iknowit`, WS 3836594593) bleibt in `Mods=` und `WorkshopItems=`. `mkev_modpatcher` bleibt 1.3.2 (kein Code-Change fuer diesen Tausch).
+
+### Update von v1.32
+- Server und alle Clients: diesen v1.33-Installer ausfuehren oder `mods\mkev_modpatcher` durch Version 1.3.2 ersetzen (Checksummen-Aenderung). Die RAM-Option ist freiwillig und standardmaessig aus.
+- Wer v1.33 schon vor der Listen-Aktualisierung vom 13.11.2026 installiert hat: Option 1 erneut ausfuehren, damit `Mods=` und `WorkshopItems=` aktualisiert werden (oder diese Zeilen aus `MKevServer_setup` ersetzen). ModPatcher 1.3.2 selbst ist unveraendert.
+
+
+## v1.32 - 12.11.2026
+
+**Download:** [`Modpatch-Installer-v1.32.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.32.zip) (Archiv)  
+**SHA256:** `a3c52537ccac7f3e624e7b085f6fba3b96475c600006fcd7989eafb8b08d6221`  
+Mitgelieferte Mods: `mkev_modpatcher` **1.3** (Timeout-Hinweis im Lade-Popup). `mkevserverbootpatch` 1.1.2 und Linux-Guard 1.0.0 sind unverändert (bytegleich zu v1.3 / v1.3b / v1.31). Die Server-Sandbox ist unverändert zu v1.31 (`FirearmUseDamageChance = 1`).
+
+### Geändert
+- `mkev_modpatcher` 1.3: Der Hinweis beim Verbinden erwähnt jetzt auch, dass es in seltenen Fällen beim ersten Join zu einem Verbindungs-Timeout kommen kann, der die Fehlermeldung des Spiels anzeigt, als Zitat in Rot. Der Wortlaut stammt unverändert aus den Übersetzungsdateien des Spiels (Schlüssel `UI_GameLoad_UnexpectedError1`, geprüft in der B42-Client-Installation am 12.11.2026): DE `Leider ist ein unerwarteter Fehler aufgetreten.` / EN `Sorry, an unexpected error occurred.` Danach der Hinweis, den Client neu zu starten und neu zu verbinden. Die bisherigen Texte zum Laden sind unverändert. Der 30-Sekunden-Timeout selbst steht fest im Java-Code (`IsoWorld.init`) und lässt sich per Lua nicht ändern.
+
+### Update von v1.31
+- Server-Admins und Spieler: Den Installer v1.32 ausführen oder `mods\mkev_modpatcher` durch Version 1.3 ersetzen. Das gilt für den Server **und** alle Clients (ModPatcher 1.3 ändert die Lua-Checksumme). Die Server-Sandbox ändert sich nicht.
+
+### Update von v1.3b oder älter
+- Von v1.3b: Zusätzlich in der Server-Sandbox `FirearmUseDamageChance = 1` setzen (in diesem Paket bereits enthalten) und ModPatcher 1.3 wie oben installieren.
+- Von v1.3 oder älter: Die Sandbox enthält auch die Korrekturen aus v1.3b. `Zomboid/Server/<Servername>_SandboxVars.lua` durch `MKevServer_setup/MKevServer_SandboxVars.lua` ersetzen (vorher die eigene Datei sichern) oder Option 1, und ModPatcher 1.3 auf dem Server und allen Clients installieren.
+
 ## v1.31 - 12.11.2026
 
-**Download:** [`Modpatch-Installer-v1.31.zip`](Modpatch-Installer-v1.31.zip)  
+**Download:** [`Modpatch-Installer-v1.31.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.31.zip) (Archiv)  
 **SHA256:** `affec8bc69be26c50e394dd7994af6862c5c773816e994bc9e7fe15ccef9979e`  
 Mitgelieferte Mods unverändert zu v1.3 / v1.3b (bytegleich): `mkev_modpatcher` 1.2, `mkevserverbootpatch` 1.1.2, Linux-Guard 1.0.0.
 
@@ -247,7 +315,7 @@ Mitgelieferte Mods unverändert zu v1.3 (bytegleich): `mkev_modpatcher` 1.2, `mk
 
 **Download:** [`Modpatch-Installer-v1.3.zip`](../Patches/Patch-Installer/Modpatch-Installer-v1.3.zip) (Archiv)  
 **SHA256:** `1c41d1d5f30f972bf5235f7ee3ff41e64fafec03d9adc68e2c83a20d1aa1eff0`  
-Enthaltener ModPatcher: `mkev_modpatcher` **1.2** (auch einzeln als [`Modpatcher-v1.2.zip`](../Patches/ModPatcher/Modpatcher-v1.2.zip), SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`).  
+Enthaltener ModPatcher: `mkev_modpatcher` **1.2** (auch einzeln als `Modpatcher-v1.2.zip`, SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`).  
 Enthaltener BootPatch: `mkevserverbootpatch` **1.1.2** (auch einzeln als [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip), SHA256 `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`).  
 Neu: **[Linux-Guard](../Patches/Linux-Guard/README.md) 1.0.0** (Ordner `Linux-Guard/`, optional, nur für Linux-Dedicated-Server).
 

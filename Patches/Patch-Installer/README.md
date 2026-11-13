@@ -1,10 +1,10 @@
 # MKev's Modpatch Installer
 
 This folder is the archive of previous installer packages, not the current release.
-Download the current build (v1.31) from [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) ([`/Modpatch-Installer/Modpatch-Installer-v1.31.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.31.zip)).
-The description below is the one of the archived v1.1b package. What changed in v1.2 (Server BootPatch 1.1.1: fixes bundled, rewritten by the installer when a mod updates) in v1.3 (ModPatcher 1.2, BootPatch 1.1.2, new optional Linux-Guard for Linux servers) in v1.3b (hotfix: fixed missing parameters in server files) and in v1.31 (`FirearmUseDamageChance = 1` in the server sandbox): [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md).
+Download the current build (v1.33) from [MKev's Modpatch Installer](../../Modpatch-Installer/README.md) ([`/Modpatch-Installer/Modpatch-Installer-v1.33.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.33.zip)).
+The description below is the one of the archived v1.1b package. What changed in v1.2 (Server BootPatch 1.1.1: fixes bundled, rewritten by the installer when a mod updates) in v1.3 (ModPatcher 1.2, BootPatch 1.1.2, new optional Linux-Guard for Linux servers) in v1.3b (hotfix: fixed missing parameters in server files) in v1.31 (`FirearmUseDamageChance = 1` in the server sandbox) in v1.32 (ModPatcher 1.3: connect-notice timeout hint) and in v1.33 (ModPatcher 1.3.2: rewritten connect-notice warning and reload-speed guard, optional client RAM): [`/Modpatch-Installer/CHANGELOG.md`](../../Modpatch-Installer/CHANGELOG.md).
 
-One download that sets up a dedicated server and the clients for a 376-mod Project Zomboid Build 42 multiplayer list.
+One download that sets up a dedicated server and the clients for a 375-mod Project Zomboid Build 42 multiplayer list.
 Every fix is matched to a specific error from a real server log, and every one is a runtime patch or a file built into the patch mods' own folders.
 Workshop originals are never edited.
 
@@ -18,7 +18,7 @@ The installer is in English and German. `ModPatchInstaller.bat` asks which langu
 
 - **Game:** Project Zomboid Build **42.22.2**, multiplayer (dedicated server and clients)
 - **Collection:** [MKev Zomboid Modlist B42.22, Workshop 3827894199](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199)
-- **Current release:** [`Modpatch-Installer-v1.31.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.31.zip) in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md). This folder keeps v1.3b, v1.3, v1.2, v1.1b and the older packages below.
+- **Current release:** [`Modpatch-Installer-v1.33.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.33.zip) in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md). This folder keeps v1.32, v1.31, v1.3b, v1.3, v1.2, v1.1b and the older packages below.
 
 Deeper docs, kept next to this folder:
 
@@ -35,12 +35,14 @@ Current release, in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md)
 
 | File | Version | SHA256 |
 |---|---|---|
-| **[`Modpatch-Installer-v1.31.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.31.zip)** | Installer 1.31 + ModPatcher 1.2 + BootPatch 1.1.2 + Linux-Guard 1.0.0 (`FirearmUseDamageChance = 1`) | `affec8bc69be26c50e394dd7994af6862c5c773816e994bc9e7fe15ccef9979e` |
+| **[`Modpatch-Installer-v1.33.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.33.zip)** | Installer 1.33 + ModPatcher 1.3.2 + BootPatch 1.1.2 + Linux-Guard 1.0.0 (rewritten connect-notice warning and reload-speed guard; optional client RAM; sandbox unchanged from v1.32) | `5793a5bc13bcaae9b0b7939049f668561641b029635bf1e4c85bcaca5eb42b46` |
 
 Files still in this folder:
 
 | File | Version | SHA256 |
 |---|---|---|
+| `Modpatch-Installer-v1.32.zip` | Installer 1.32 (ModPatcher 1.3: connect-notice timeout hint; sandbox unchanged from v1.31) | `a3c52537ccac7f3e624e7b085f6fba3b96475c600006fcd7989eafb8b08d6221` |
+| `Modpatch-Installer-v1.31.zip` | Installer 1.31 (sandbox `FirearmUseDamageChance = 1`; ModPatcher 1.2, same as v1.3 / v1.3b) | `affec8bc69be26c50e394dd7994af6862c5c773816e994bc9e7fe15ccef9979e` |
 | `Modpatch-Installer-v1.3b.zip` | Installer 1.3b (hotfix of v1.3: fixed missing parameters in server files; same mods) | `f639288657025525ebfdcf702a416292e0e0c8e9cb33525d7c59c4bdc5f65f7c` |
 | `Modpatch-Installer-v1.3.zip` | Installer 1.3 (ModPatcher 1.2 + BootPatch 1.1.2 + Linux-Guard 1.0.0; SandboxVars without Wolf's Extraction Quest options) | `1c41d1d5f30f972bf5235f7ee3ff41e64fafec03d9adc68e2c83a20d1aa1eff0` |
 | `Modpatch-Installer-v1.2.zip` | Installer 1.2 (ModPatcher 1.1b + BootPatch 1.1.1) | `c9c6b3d48882b2136dfce0d750f1b1cb2d390e71969e79d374967dde6613a727` |
@@ -50,7 +52,7 @@ Files still in this folder:
 
 All hashes for the zips in this folder are also in [`SHA256SUMS.txt`](SHA256SUMS.txt). What changed in each installer version: [`CHANGELOG.md`](CHANGELOG.md).
 
-Standalone ModPatcher, current build only: [`Modpatcher-v1.2.zip`](../ModPatcher/Modpatcher-v1.2.zip) in [Patches/ModPatcher](../ModPatcher/README.md) (SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`).
+Standalone ModPatcher, current build only: [`Modpatcher-v1.3.2.zip`](../ModPatcher/Modpatcher-v1.3.2.zip) in [Patches/ModPatcher](../ModPatcher/README.md) (SHA256 `ea875c4fd39295f509805eb5b6a29c1f9041a77a23eebfa2d0da0049f218dc10`).
 
 These archives are described in the changelogs and are not stored in this repository:
 
@@ -111,7 +113,7 @@ Two scripts with the same logic: `ModPatchInstaller_en.ps1` and `ModPatchInstall
 - **No secrets shipped:** the package contains no `servertest.ini`, only the three list values (`Mods=`, `WorkshopItems=`, `Map=`) as separate text files.
 - **Steam libraries:** finds Workshop folders through `libraryfolders.vdf`. `PZ_WORKSHOP` overrides this, pointing at `...\steamapps\workshop\content\108600`.
 
-`VERSION.txt` in the v1.1b zip records installer 1.1b, ModPatcher 1.1b, BootPatch 1.1.0, and the server kit below. The v1.2 zip records installer 1.2, ModPatcher 1.1b, BootPatch 1.1.1 and the same server kit; the v1.3 zip installer 1.3, ModPatcher 1.2, BootPatch 1.1.2, Linux-Guard 1.0.0 and the same server kit; the v1.3b zip installer 1.3b with the same mods and the fixed SandboxVars; the v1.31 zip installer 1.31 with the same mods and `FirearmUseDamageChance = 1`.
+`VERSION.txt` in the v1.1b zip records installer 1.1b, ModPatcher 1.1b, BootPatch 1.1.0, and the server kit below. The v1.2 zip records installer 1.2, ModPatcher 1.1b, BootPatch 1.1.1 and the same server kit; the v1.3 zip installer 1.3, ModPatcher 1.2, BootPatch 1.1.2, Linux-Guard 1.0.0 and the same server kit; the v1.3b zip installer 1.3b with the same mods and the fixed SandboxVars; the v1.31 zip installer 1.31 with the same mods and `FirearmUseDamageChance = 1`; the v1.32 zip installer 1.32 with ModPatcher 1.3 (connect-notice timeout hint) and the same sandbox as v1.31.
 
 ---
 
@@ -191,8 +193,8 @@ Since BootPatch 1.1.1 (installer v1.2) F1–F3 are fixed files inside the mod, s
 | | |
 |---|---|
 | Build | 42.22.2 |
-| Mods | **376** (`Mods=`, MKev server state of 2026-11-09, both patch mods last) |
-| Workshop items | **325**, collection 3827894199 (I Know It! 3836594593 comes from the Workshop like every other mod) |
+| Mods | **375** (`Mods=`, MKev server state of 2026-11-13, both patch mods last) |
+| Workshop items | **324**, collection 3827894199 (I Know It! 3836594593 comes from the Workshop like every other mod) |
 | Map | `Muldraugh, KY` |
 | Sandbox | full `servertest_SandboxVars.lua` of the MKev server (water shutoff modifier 3, power shutoff modifier 22, plus the I Know It! and M-13 Reading Tweaks options) |
 | Preset | `MKevServer` for the in-game mod manager |
@@ -231,10 +233,10 @@ Yes. The server and every player need the same `mkev_modpatcher` and `mkevserver
 Yes. Option 1 replaces only `Mods=`, `WorkshopItems=` and `Map=` in `servertest.ini`. Passwords, ports, server name, and all other lines stay byte-for-byte. Everything is backed up first, and option 5 shows the changes without writing anything. The package itself contains no credentials.
 
 **How do I verify my download?**
-Compare the SHA256 of the current zip (v1.31) with [`SHA256SUMS.txt`](../../Modpatch-Installer/SHA256SUMS.txt) in `/Modpatch-Installer/`. In PowerShell: `Get-FileHash .\Modpatch-Installer-v1.31.zip`. Hashes for the copies kept in this folder are in [`SHA256SUMS.txt`](SHA256SUMS.txt).
+Compare the SHA256 of the current zip (v1.33) with [`SHA256SUMS.txt`](../../Modpatch-Installer/SHA256SUMS.txt) in `/Modpatch-Installer/`. In PowerShell: `Get-FileHash .\Modpatch-Installer-v1.33.zip`. Hashes for the copies kept in this folder are in [`SHA256SUMS.txt`](SHA256SUMS.txt).
 
 **I updated from v1.1 or v1.0. What do I do?**
-Run the current v1.31 installer again, or replace `Zomboid\mods\mkev_modpatcher` and `Zomboid\mods\mkevserverbootpatch` with the folders from the zip. Do it on the server and on every client.
+Run the current v1.32 installer again, or replace `Zomboid\mods\mkev_modpatcher` and `Zomboid\mods\mkevserverbootpatch` with the folders from the zip. Do it on the server and on every client.
 
 **Where do I report bugs?**
 Open an issue in this repository (MKev187/PZ-Stuff). Please include your `console.txt` or the `Zomboid\Logs\*DebugLog*.txt` lines around the error, plus the installer's `installer_log.txt`.

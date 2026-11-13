@@ -2,16 +2,16 @@
 
 Patch package for the **MKev B42 Mod Collection** ([Workshop collection 3827894199](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199), Project Zomboid Build 42.22.2 multiplayer).
 
-**Current download (this folder):** [`Modpatch-Installer-v1.31.zip`](Modpatch-Installer-v1.31.zip)  
-**SHA256:** `affec8bc69be26c50e394dd7994af6862c5c773816e994bc9e7fe15ccef9979e`  
-Release: [Modpatch-Installer-v1.31](https://github.com/MKev187/PZ-Stuff/releases/tag/Modpatch-Installer-v1.31).  
-v1.31 changes one sandbox option: `FirearmUseDamageChance = 1` (was `2`). The mods are the same as in v1.3 and v1.3b.
+**Current download (this folder):** [`Modpatch-Installer-v1.33.zip`](Modpatch-Installer-v1.33.zip)  
+**SHA256:** `05c4e6652879dee2b52d5a191b61b96c3278b00f6d82f4037a7636e5eea33612`  
+Release: [Modpatch-Installer-v1.33](https://github.com/MKev187/PZ-Stuff/releases/tag/Modpatch-Installer-v1.33).  
+v1.33 updates MKev's Modpatcher to **1.3.2** (rewritten connect-notice warning with blinking title, plus the 1.3.1 reload-speed nil-strap guard) and adds an optional client RAM question. The server sandbox is unchanged from v1.32 / v1.31 (`FirearmUseDamageChance = 1`).
 
-The standalone current patcher is [`Modpatcher-v1.2.zip`](../Patches/ModPatcher/Modpatcher-v1.2.zip) in [MKev's Modpatcher](../Patches/ModPatcher/README.md) (SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`).
+The standalone current patcher is [`Modpatcher-v1.3.2.zip`](../Patches/ModPatcher/Modpatcher-v1.3.2.zip) in [MKev's Modpatcher](../Patches/ModPatcher/README.md) (SHA256 `ea875c4fd39295f509805eb5b6a29c1f9041a77a23eebfa2d0da0049f218dc10`).
 The standalone BootPatch is [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip) in [MKev's Server BootPatch](../Patches/Server-BootPatch/README.md) (SHA256 `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`).
 Linux-Guard (optional, Linux dedicated servers) is in the zip (folder `Linux-Guard/`) and in [MKev's Linux-Guard](../Patches/Linux-Guard/README.md).
 
-Older installer packages are in [Patches/Patch-Installer](../Patches/Patch-Installer/README.md): `Modpatch-Installer-v1.3b.zip`, `Modpatch-Installer-v1.3.zip`, `Modpatch-Installer-v1.2.zip`, `Modpatch-Installer-v1.1b.zip`, `Modpatch-Installer-v1.0.zip` and `MKev-ModPatcher-v0.3.0.zip` (Build 42.21).
+Older installer packages are in [Patches/Patch-Installer](../Patches/Patch-Installer/README.md): `Modpatch-Installer-v1.32.zip`, `Modpatch-Installer-v1.31.zip`, `Modpatch-Installer-v1.3b.zip`, `Modpatch-Installer-v1.3.zip`, `Modpatch-Installer-v1.2.zip`, `Modpatch-Installer-v1.1b.zip`, `Modpatch-Installer-v1.0.zip` and `MKev-ModPatcher-v0.3.0.zip` (Build 42.21).
 
 These archives are not stored in this repository. The hashes are the ones published with those versions:
 
@@ -24,11 +24,11 @@ These archives are not stored in this repository. The hashes are the ones publis
 
 | Part | Version |
 |---|---|
-| Modpatch Installer (`ModPatchInstaller.bat` + `ModPatchInstaller_en.ps1` / `ModPatchInstaller_de.ps1`) | 1.31 (English / Deutsch) |
-| MKev's Modpatcher (`mkev_modpatcher`) | 1.2 |
+| Modpatch Installer (`ModPatchInstaller.bat` + `ModPatchInstaller_en.ps1` / `ModPatchInstaller_de.ps1`) | 1.33 (English / Deutsch) |
+| MKev's Modpatcher (`mkev_modpatcher`) | 1.3.2 |
 | MKev's Server BootPatch (`mkevserverbootpatch`) | 1.1.2 |
 | MKev's Linux-Guard (`Linux-Guard/start-server.sh`, optional, Linux servers) | 1.0.0 |
-| Server setup (`MKevServer_setup`) | 376 mods / 325 Workshop items, Map Muldraugh, KY, sandbox (incl. Wolf's Extraction Quest; `FirearmUseDamageChance = 1` since 1.31) + preset `MKevServer` |
+| Server setup (`MKevServer_setup`) | 375 mods / 324 Workshop items, Map Muldraugh, KY, sandbox (incl. Wolf's Extraction Quest; `FirearmUseDamageChance = 1` since 1.31) + preset `MKevServer` |
 
 [I Know It!](../Mods/IKnowIt/README.md) (Workshop 3836594593) is part of the mod list but is not shipped in the zip. It comes from the Workshop collection.
 
@@ -41,6 +41,7 @@ These archives are not stored in this repository. The hashes are the ones publis
    - **1 Install & set up** adapts your existing server files. It shows what will change and asks first. It then backs up everything, installs the two patch mods to `%USERPROFILE%\Zomboid\mods\`, and replaces only the `Mods=`, `WorkshopItems=` and `Map=` lines of `Zomboid\Server\servertest.ini`. Passwords, ports and all other lines stay. Finally it sets the server sandbox and adds the mod preset `MKevServer`.
    - **2 Install only** writes to a separate folder. It installs the two patch mods and puts ready-made `MKevServer_*` files into `Zomboid\MKevServer_setup\`. Nothing else is changed.
    - **3 Restore backup**, **4 Exit**, **5 Dry run** (shows changes, writes nothing).
+   After option 1, 2 or 5 the installer can optionally set client RAM (`-Xms`/`-Xmx` in `ProjectZomboid64.json`). Default is no change. This never changes the dedicated server.
 
 Since v1.2 the 3 script fixes of MKev's Server BootPatch (1.1.1 and later, now 1.1.2) are fixed parts of the mod, and they heal themselves. At every install the installer finds the original file the game loads (highest `42.x` version folder of the mod, else `common`; names compared case-insensitively) and decides per fix:
 
@@ -62,9 +63,11 @@ The installer is for Windows. On a Linux server copy the two folders `mkev_modpa
  Optional, only for admins who want it: `mkevserverbootpatch/tools/check_upstream.sh` checks the fixes against the installed Workshop mods by hand (same logic as the installer; dry run by default, `--fix` applies). Nothing has to be set up for it.
 
 Server and every player need the same patch versions. The changes are listed in [`CHANGELOG.md`](CHANGELOG.md) (in this folder and inside the zip).
-Updating from v1.3b: only `FirearmUseDamageChance` in the server sandbox changed (`2` to `1`). Server admins set that value, or replace `Zomboid/Server/<servername>_SandboxVars.lua` with `MKevServer_setup/MKevServer_SandboxVars.lua` (back up your own file first) and restart the server, or run option 1. Players need nothing new.
-Updating from v1.3: the sandbox also includes the v1.3b fixes. Replace the sandbox file or run option 1; players need nothing new.
-Updating from v1.2 or older: run the v1.31 installer again, or replace `Zomboid\mods\mkev_modpatcher` and `Zomboid\mods\mkevserverbootpatch` with the folders from the zip (server and all players; ModPatcher 1.2 changes the Lua checksum).
+Updating from v1.32: only MKev's Modpatcher changed (1.3 to 1.3.2: rewritten connect-notice warning and the reload-speed nil-strap guard). Run the v1.33 installer, or replace `Zomboid\mods\mkev_modpatcher` with the folder from the zip. Do this on the server **and** on every client (ModPatcher 1.3.2 changes the Lua checksum). The server sandbox does not change. The new RAM question is optional and off by default.
+Updating from v1.31: also install ModPatcher 1.3.2 as above (it includes the 1.3 connect-notice timeout hint).
+Updating from v1.3b: also set `FirearmUseDamageChance = 1` in the server sandbox (already in this package), then install ModPatcher 1.3.2 as above.
+Updating from v1.3: the sandbox also includes the v1.3b fixes. Replace the sandbox file or run option 1, and install ModPatcher 1.3.2 on the server and every client.
+Updating from v1.2 or older: run the v1.33 installer again, or replace `Zomboid\mods\mkev_modpatcher` and `Zomboid\mods\mkevserverbootpatch` with the folders from the zip (server and all players; ModPatcher 1.3.2 changes the Lua checksum).
 
 What the patcher and the boot fixes do, module by module: [MKev's Modpatcher](../Patches/ModPatcher/README.md), [MKev's Server BootPatch](../Patches/Server-BootPatch/README.md), [MKev's Linux-Guard](../Patches/Linux-Guard/README.md).
 

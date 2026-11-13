@@ -2,11 +2,42 @@
 
 Mod id `mkev_modpatcher`. The folder name and the mod id do not change between versions, so the `Mods=` entry stays `mkev_modpatcher`.
 
-Version scheme: internal builds through 2026-10-31 used `0.1.<n>`. Older labels `1.1` through `1.8` map to `0.1.1` through `0.1.8` (an installed 1.8 build stayed labeled 1.8). From 2026-11-10 the public builds are `1.1_vvr`, `1.1b` and `1.2`. There is no standalone zip for the `0.1.x` or `1.x` builds; those shipped only inside the installer package. The build-by-build notes below for 0.1.11 and earlier are the mod's own `CHANGELOG.md` from `Modpatcher-v1.1b.zip`, with the installer-package notes left out.
+Version scheme: internal builds through 2026-10-31 used `0.1.<n>`. Older labels `1.1` through `1.8` map to `0.1.1` through `0.1.8` (an installed 1.8 build stayed labeled 1.8). From 2026-11-10 the public builds are `1.1_vvr`, `1.1b`, `1.2` and `1.3`. There is no standalone zip for the `0.1.x` or `1.x` builds; those shipped only inside the installer package. The build-by-build notes below for 0.1.11 and earlier are the mod's own `CHANGELOG.md` from `Modpatcher-v1.1b.zip`, with the installer-package notes left out.
+
+## MKev's Modpatcher v1.3.2 — 2026-11-13
+
+**Download:** [`Modpatcher-v1.3.2.zip`](Modpatcher-v1.3.2.zip)  
+**SHA256:** `ea875c4fd39295f509805eb5b6a29c1f9041a77a23eebfa2d0da0049f218dc10`
+
+### Changed
+- Connect notice (`mkevmp_connectnotice.lua`, `Translate/EN/UI.json`): rewritten warning text (DE/EN). The title is now
+  all-caps `HINWEIS` / `CAUTION` and blinks once per second (500 ms visible, 500 ms hidden) by changing only the
+  title alpha in `prerender` via `getTimestampMs` (gold colour unchanged). Paragraph 4 starts with an inline red
+  `ACHTUNG!` / `ATTENTION!`, then the timeout hint in the normal body colour on the same wrapped paragraph. The red
+  quoted game error (`UI_GameLoad_UnexpectedError1`) and the "restart the client" line are unchanged. The window
+  still grows with the text and tightens padding/line gap on short screens (including 1280x720) so everything stays
+  visible.
+- Reload-speed guard (`mkevmp_reloadspeed.lua`, since 1.3.1): nil-safe wrap of vanilla `ISReloadWeaponAction.setReloadSpeed`.
+  Existing shared wrappers (including VFE's override and BritasArmorReloadCompat) stay in the chain. The wrap only
+  falls back on the nil-strap error; normal VFE reload-speed behavior is unchanged.
+- `mkevmp_version.lua` / `mod.info`: `modversion` 1.3.2 (id `mkev_modpatcher` and display name
+  `MKev's Modpatcher` unchanged). Server and all clients need the same version, because the Lua
+  checksum changes.
+
+## MKev's Modpatcher v1.3 — 2026-11-12
+
+**Download:** `Modpatcher-v1.3.zip` (no longer stored standalone; still inside archived installer v1.32)  
+**SHA256:** `08189195765db5d0c513992dfa079587f097f3f865d61e7ab7c08866218b34b1`
+
+1.3 adds a timeout hint to the connect notice. It ships with MKev's Modpatch Installer v1.32.
+
+### Changed
+- Connect notice: the loading notice now also says that a rare connection timeout on the first join can show the game's error message, quoted in red. The wording is taken verbatim from the game translation files (key `UI_GameLoad_UnexpectedError1`, checked in the B42 client on 12.11.2026): DE `Leider ist ein unerwarteter Fehler aufgetreten.` / EN `Sorry, an unexpected error occurred.` The notice then tells the player to restart the client and connect again. The previous loading-notice paragraphs are unchanged. The 30-second client timeout itself is hard-coded in Java (`IsoWorld.init`) and cannot be changed from Lua.
+- `mkevmp_version.lua` / `mod.info`: `modversion` 1.3 (id `mkev_modpatcher` and display name `MKev's Modpatcher` unchanged). Server and every player need 1.3, because the Lua checksum changes.
 
 ## MKev's Modpatcher v1.2 — 2026-11-11
 
-**Download:** [`Modpatcher-v1.2.zip`](Modpatcher-v1.2.zip)  
+**Download:** `Modpatcher-v1.2.zip` (no longer stored in this folder; inside the archived installers v1.31 / v1.3 / v1.3b)  
 **SHA256:** `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`
 
 1.2 is 1.1b without a functional change. It ships with MKev's Modpatch Installer v1.3.
