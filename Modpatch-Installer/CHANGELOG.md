@@ -7,7 +7,7 @@ Older packages (`Modpatch-Installer-v1.32.zip`, `Modpatch-Installer-v1.31.zip`, 
 ## v1.33 - 2026-11-13
 
 **Download:** [`Modpatch-Installer-v1.33.zip`](Modpatch-Installer-v1.33.zip)  
-**SHA256:** `05c4e6652879dee2b52d5a191b61b96c3278b00f6d82f4037a7636e5eea33612`  
+**SHA256:** `c65a2a2d5c0328ee315a286d65b36cabdbae464aca36162f56341d2c53acc21e`  
 Bundled mods: `mkev_modpatcher` **1.3.2** (rewritten connect-notice warning, blinking all-caps title, plus the 1.3.1 reload-speed nil-strap guard). `mkevserverbootpatch` 1.1.2 and Linux-Guard 1.0.0 are unchanged. The server sandbox is unchanged from v1.32 / v1.31 (`FirearmUseDamageChance = 1`).
 
 ### Changed
@@ -240,7 +240,7 @@ Installer for the collection release (base 0.3.0multi, EN/DE). Build 42.22.2, co
 ## v1.33 - 13.11.2026
 
 **Download:** [`Modpatch-Installer-v1.33.zip`](Modpatch-Installer-v1.33.zip)  
-**SHA256:** `05c4e6652879dee2b52d5a191b61b96c3278b00f6d82f4037a7636e5eea33612`  
+**SHA256:** `c65a2a2d5c0328ee315a286d65b36cabdbae464aca36162f56341d2c53acc21e`  
 Mitgelieferte Mods: `mkev_modpatcher` **1.3.2** (neuer Warntext und blinkender Titel der Connect-Notice, plus Reload-Guard 1.3.1). `mkevserverbootpatch` 1.1.2 und Linux-Guard 1.0.0 sind unveraendert. Die Server-Sandbox ist unveraendert zu v1.32 / v1.31 (`FirearmUseDamageChance = 1`).
 
 ### Geaendert

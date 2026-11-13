@@ -55,7 +55,7 @@ Two fixes are the ones people usually ask about. The full module list is on the 
 
 **The Tweed jacket tooltip fix, added in 1.1b.** The Tweed jacket ("Tweedjacke", EN "Suit Jacket - Tweed") is not a vanilla item. It comes from Spongie's Clothing. The closed jacket uses BodyLocation `base:jacket_suit`, and the open jacket uses `base:JACKET_OPEN`. Neither id exists in Build 42.22, so every mouse hover threw a `NullPointerException` in the item tooltip. The fix sets `base:jacketsuit` on the jacket, and `SpnOpenCloth:JACKET_OPEN` on the open jacket when Spongie's Open Jackets [BASE] is active. It runs only while Spongie's Clothing is active and the location is still missing. Spongie's files are not modified.
 
-After you install, the log should show `[MKev-ModPatcher] version 1.3 loaded`.
+After you install, the log should show `[MKev-ModPatcher] version 1.3.2 loaded`.
 
 ### Earlier installer packages
 
@@ -63,10 +63,14 @@ After you install, the log should show `[MKev-ModPatcher] version 1.3 loaded`.
 
 Still in that folder:
 
+- `Modpatch-Installer-v1.32.zip` (installer 1.32, with ModPatcher 1.3: connect-notice timeout hint)
+- `Modpatch-Installer-v1.31.zip` (installer 1.31, sandbox `FirearmUseDamageChance = 1`; ModPatcher 1.2)
+- `Modpatch-Installer-v1.3b.zip` (installer 1.3b, hotfix of v1.3: fixed missing parameters in server files)
+- `Modpatch-Installer-v1.3.zip` (installer 1.3, with ModPatcher 1.2, Server BootPatch 1.1.2 and Linux-Guard 1.0.0)
 - `Modpatch-Installer-v1.2.zip` (installer 1.2, with ModPatcher 1.1b and Server BootPatch 1.1.1)
+- `Modpatch-Installer-v1.1b.zip` (installer 1.1b, with ModPatcher 1.1b and Server BootPatch 1.1.0)
 - `Modpatch-Installer-v1.0.zip` (installer 1.0, with ModPatcher 0.1.11 and Server BootPatch 1.1.0)
 - `MKev-ModPatcher-v0.3.0.zip`, the older package for Build 42.21
-- `Modpatch-Installer-v1.1b.zip` (installer 1.1b, with ModPatcher 1.1b and Server BootPatch 1.1.0)
 
 ### MKev's Server BootPatch
 

@@ -7,7 +7,7 @@ Version scheme: internal builds through 2026-10-31 used `0.1.<n>`. Older labels 
 ## MKev's Modpatcher v1.3.2 — 2026-11-13
 
 **Download:** [`Modpatcher-v1.3.2.zip`](Modpatcher-v1.3.2.zip)  
-**SHA256:** `ea875c4fd39295f509805eb5b6a29c1f9041a77a23eebfa2d0da0049f218dc10`
+**SHA256:** `5be06bec829b6b41a4724585d726425d792afb0213dc82982374fddf633161e9`
 
 ### Changed
 - Connect notice (`mkevmp_connectnotice.lua`, `Translate/EN/UI.json`): rewritten warning text (DE/EN). The title is now

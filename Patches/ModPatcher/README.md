@@ -17,13 +17,13 @@ The all-in-one server and client setup (this mod, the server kit, and the Server
 
 | File | Version | SHA256 |
 |---|---|---|
-| **[`Modpatcher-v1.3.2.zip`](Modpatcher-v1.3.2.zip)** (current) | `mkev_modpatcher` 1.3.2 | `ea875c4fd39295f509805eb5b6a29c1f9041a77a23eebfa2d0da0049f218dc10` |
+| **[`Modpatcher-v1.3.2.zip`](Modpatcher-v1.3.2.zip)** (current) | `mkev_modpatcher` 1.3.2 | `5be06bec829b6b41a4724585d726425d792afb0213dc82982374fddf633161e9` |
 
 Hashes are also in [`SHA256SUMS.txt`](SHA256SUMS.txt). History: [`CHANGELOG.md`](CHANGELOG.md).
 
 `Modpatcher-v1.3.zip` (SHA256 `08189195765db5d0c513992dfa079587f097f3f865d61e7ab7c08866218b34b1`), `Modpatcher-v1.2.zip` (SHA256 `72e78c65d3e62ad6e14d9bdf3aa920344062ebf73a18d8876722d787ef941b17`), `Modpatcher-v1.1b.zip` (SHA256 `2e49eff61d245d8fe78dee632e6c306e4794de3370929e124722638b721cfbcc`) and `Modpatcher-v1.1_vvr.zip` (SHA256 `e1f7c4690fc15e0c11f793bfe08b5c35d4423c2a4a2c86fc991d5d81bc6cfe3a`) are the previous standalone builds. 1.3, 1.2 and 1.1b are not stored as standalone zips in this folder (1.3 is still inside the archived installer v1.32; 1.2 is still inside the archived installers v1.31 / v1.3 / v1.3b; 1.1b is inside the archived installers v1.2 and v1.1b). There is no standalone zip for 1.0 or for 0.1.11. Installer v1.0 still bundled patcher 0.1.11; see [MKev's Modpatch Installer](../Patch-Installer/README.md).
 
-Check the log for `[MKev-ModPatcher] version 1.3 loaded`.
+Check the log for `[MKev-ModPatcher] version 1.3.2 loaded`.
 
 ### Install the standalone zip
 

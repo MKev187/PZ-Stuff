@@ -3,11 +3,11 @@
 Patch package for the **MKev B42 Mod Collection** ([Workshop collection 3827894199](https://steamcommunity.com/sharedfiles/filedetails/?id=3827894199), Project Zomboid Build 42.22.2 multiplayer).
 
 **Current download (this folder):** [`Modpatch-Installer-v1.33.zip`](Modpatch-Installer-v1.33.zip)  
-**SHA256:** `05c4e6652879dee2b52d5a191b61b96c3278b00f6d82f4037a7636e5eea33612`  
+**SHA256:** `c65a2a2d5c0328ee315a286d65b36cabdbae464aca36162f56341d2c53acc21e`  
 Release: [Modpatch-Installer-v1.33](https://github.com/MKev187/PZ-Stuff/releases/tag/Modpatch-Installer-v1.33).  
 v1.33 updates MKev's Modpatcher to **1.3.2** (rewritten connect-notice warning with blinking title, plus the 1.3.1 reload-speed nil-strap guard) and adds an optional client RAM question. The server sandbox is unchanged from v1.32 / v1.31 (`FirearmUseDamageChance = 1`).
 
-The standalone current patcher is [`Modpatcher-v1.3.2.zip`](../Patches/ModPatcher/Modpatcher-v1.3.2.zip) in [MKev's Modpatcher](../Patches/ModPatcher/README.md) (SHA256 `ea875c4fd39295f509805eb5b6a29c1f9041a77a23eebfa2d0da0049f218dc10`).
+The standalone current patcher is [`Modpatcher-v1.3.2.zip`](../Patches/ModPatcher/Modpatcher-v1.3.2.zip) in [MKev's Modpatcher](../Patches/ModPatcher/README.md) (SHA256 `5be06bec829b6b41a4724585d726425d792afb0213dc82982374fddf633161e9`).
 The standalone BootPatch is [`Server-BootPatch-v1.1.2.zip`](../Patches/Server-BootPatch/Server-BootPatch-v1.1.2.zip) in [MKev's Server BootPatch](../Patches/Server-BootPatch/README.md) (SHA256 `6bf15134a416a64edcfb068316ba5fdf1dc7717ad4fa4ca1b6a22f3524c38ab8`).
 Linux-Guard (optional, Linux dedicated servers) is in the zip (folder `Linux-Guard/`) and in [MKev's Linux-Guard](../Patches/Linux-Guard/README.md).
 

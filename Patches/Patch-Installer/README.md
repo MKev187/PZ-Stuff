@@ -35,7 +35,7 @@ Current release, in [`/Modpatch-Installer/`](../../Modpatch-Installer/README.md)
 
 | File | Version | SHA256 |
 |---|---|---|
-| **[`Modpatch-Installer-v1.33.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.33.zip)** | Installer 1.33 + ModPatcher 1.3.2 + BootPatch 1.1.2 + Linux-Guard 1.0.0 (rewritten connect-notice warning and reload-speed guard; optional client RAM; sandbox unchanged from v1.32) | `5793a5bc13bcaae9b0b7939049f668561641b029635bf1e4c85bcaca5eb42b46` |
+| **[`Modpatch-Installer-v1.33.zip`](../../Modpatch-Installer/Modpatch-Installer-v1.33.zip)** | Installer 1.33 + ModPatcher 1.3.2 + BootPatch 1.1.2 + Linux-Guard 1.0.0 (rewritten connect-notice warning and reload-speed guard; optional client RAM; sandbox unchanged from v1.32) | `c65a2a2d5c0328ee315a286d65b36cabdbae464aca36162f56341d2c53acc21e` |
 
 Files still in this folder:
 
@@ -52,7 +52,7 @@ Files still in this folder:
 
 All hashes for the zips in this folder are also in [`SHA256SUMS.txt`](SHA256SUMS.txt). What changed in each installer version: [`CHANGELOG.md`](CHANGELOG.md).
 
-Standalone ModPatcher, current build only: [`Modpatcher-v1.3.2.zip`](../ModPatcher/Modpatcher-v1.3.2.zip) in [Patches/ModPatcher](../ModPatcher/README.md) (SHA256 `ea875c4fd39295f509805eb5b6a29c1f9041a77a23eebfa2d0da0049f218dc10`).
+Standalone ModPatcher, current build only: [`Modpatcher-v1.3.2.zip`](../ModPatcher/Modpatcher-v1.3.2.zip) in [Patches/ModPatcher](../ModPatcher/README.md) (SHA256 `5be06bec829b6b41a4724585d726425d792afb0213dc82982374fddf633161e9`).
 
 These archives are described in the changelogs and are not stored in this repository:
 
@@ -236,7 +236,7 @@ Yes. Option 1 replaces only `Mods=`, `WorkshopItems=` and `Map=` in `servertest.
 Compare the SHA256 of the current zip (v1.33) with [`SHA256SUMS.txt`](../../Modpatch-Installer/SHA256SUMS.txt) in `/Modpatch-Installer/`. In PowerShell: `Get-FileHash .\Modpatch-Installer-v1.33.zip`. Hashes for the copies kept in this folder are in [`SHA256SUMS.txt`](SHA256SUMS.txt).
 
 **I updated from v1.1 or v1.0. What do I do?**
-Run the current v1.32 installer again, or replace `Zomboid\mods\mkev_modpatcher` and `Zomboid\mods\mkevserverbootpatch` with the folders from the zip. Do it on the server and on every client.
+Run the current v1.33 installer again, or replace `Zomboid\mods\mkev_modpatcher` and `Zomboid\mods\mkevserverbootpatch` with the folders from the zip. Do it on the server and on every client.
 
 **Where do I report bugs?**
 Open an issue in this repository (MKev187/PZ-Stuff). Please include your `console.txt` or the `Zomboid\Logs\*DebugLog*.txt` lines around the error, plus the installer's `installer_log.txt`.
